@@ -12,7 +12,9 @@ public final class PaperPlugin extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		PaperLib.suggestPaper(this);
+
 		this.getCommand("casino").setExecutor(new CasinoCommand(this));
+		
 		//PaperListeners.initialize();
 
 		saveDefaultConfig();

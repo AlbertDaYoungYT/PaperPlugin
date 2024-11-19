@@ -1,69 +1,142 @@
-[00:14:49] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.4+7-LTS; Microsoft Microsoft-9889606) on Windows 11 10.0 (amd64)
-[00:14:49] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.1-131-ver/1.21.1@84281ce (2024-10-31T17:43:44Z) for Minecraft 1.21.1
-[00:14:49] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
-[00:14:50] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PaperPlugin-241119-2314-SNAPSHOT.jar'...
-[00:14:51] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PaperPlugin-241119-2314-SNAPSHOT.jar' in 1152ms.
-[00:14:51] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
-[00:14:51] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
- - PaperPlugin (241119-2314-SNAPSHOT)
-[00:14:56] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[00:14:59] [ServerMain/INFO]: Loaded 1290 recipes
-[00:14:59] [ServerMain/INFO]: Loaded 1399 advancements
-[00:14:59] [Server thread/INFO]: Starting minecraft server version 1.21.1
-[00:14:59] [Server thread/INFO]: Loading properties
-[00:15:00] [Server thread/INFO]: This server is running Paper version 1.21.1-131-ver/1.21.1@84281ce (2024-10-31T17:43:44Z) (Implementing API version 1.21.1-R0.1-SNAPSHOT)
-[00:15:00] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
-[00:15:00] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[00:15:00] [Server thread/INFO]: Using 4 threads for Netty based IO
-[00:15:01] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 8 worker threads, and population gen parallelism of 8 threads
-[00:15:01] [Server thread/INFO]: Default game type: SURVIVAL
-[00:15:01] [Server thread/INFO]: Generating keypair
-[00:15:01] [Server thread/INFO]: Starting Minecraft server on *:25565
-[00:15:01] [Server thread/INFO]: Using default channel type
-[00:15:01] [Server thread/INFO]: Paper: Using Java compression from Velocity.
-[00:15:01] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
-[00:15:01] [Server thread/INFO]: [PaperPlugin] Loading server plugin PaperPlugin v241119-2314-SNAPSHOT
-[00:15:01] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[00:15:01] [Server thread/INFO]: Preparing level "world"
-[00:15:02] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[00:15:03] [Server thread/INFO]: Time elapsed: 1008 ms
-[00:15:03] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
-[00:15:03] [Server thread/INFO]: Time elapsed: 124 ms
-[00:15:03] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
-[00:15:03] [Server thread/INFO]: Time elapsed: 67 ms
-[00:15:03] [Server thread/INFO]: [PaperPlugin] Enabling PaperPlugin v241119-2314-SNAPSHOT
-[00:15:03] [Server thread/INFO]: [spark] Starting background profiler...
-[00:15:03] [Server thread/INFO]: [spark] The async-profiler engine is not supported for your os/arch (windows11/amd64), so the built-in Java engine will be used instead.
-[00:15:03] [Server thread/INFO]: Done preparing level "world" (2.068s)
-[00:15:04] [Server thread/INFO]: Running delayed init tasks
-[00:15:04] [Server thread/INFO]: Done (15.880s)! For help, type "help"
-[00:15:04] [Server thread/INFO]: Timings Reset
-[00:15:04] [User Authenticator #0/INFO]: UUID of player AlbertTheYoung is 63edd68d-b87c-4eae-842e-da4ab8fb87ac
-[00:15:05] [Server thread/INFO]: AlbertTheYoung joined the game
-[00:15:05] [Server thread/INFO]: AlbertTheYoung[/127.0.0.1:64277] logged in with entity id 100 at ([world]3.6883139126860014, 70.0, 13.298649284678246)
-[00:15:09] [Server thread/INFO]: AlbertTheYoung issued server command: /casino
-[00:15:23] [Server thread/INFO]: AlbertTheYoung lost connection: Disconnected
-[00:15:23] [Server thread/INFO]: AlbertTheYoung left the game
-[00:15:25] [Server thread/INFO]: Stopping server
-[00:15:25] [Server thread/INFO]: [PaperPlugin] Disabling PaperPlugin v241119-2314-SNAPSHOT
-[00:15:25] [Server thread/INFO]: Saving players
-[00:15:25] [Server thread/INFO]: Saving worlds
-[00:15:25] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[00:15:25] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
-[00:15:25] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
-[00:15:25] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
-[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Saved 625 block chunks, 625 entity chunks, 0 poi chunks in world 'world' in 1.07s
-[00:15:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
-[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
-[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
-[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
-[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Saved 49 block chunks, 49 entity chunks, 0 poi chunks in world 'world_nether' in 0.04s
-[00:15:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
-[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
-[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
-[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
-[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Saved 49 block chunks, 49 entity chunks, 0 poi chunks in world 'world_the_end' in 0.03s
-[00:15:26] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[00:15:26] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[00:15:26] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[00:15:26] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[00:46:28] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.4+7-LTS; Microsoft Microsoft-9889606) on Windows 11 10.0 (amd64)
+[00:46:28] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.1-131-ver/1.21.1@84281ce (2024-10-31T17:43:44Z) for Minecraft 1.21.1
+[00:46:29] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[00:46:29] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PaperPlugin-241119-2346-SNAPSHOT.jar'...
+[00:46:30] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PaperPlugin-241119-2346-SNAPSHOT.jar' in 1066ms.
+[00:46:31] [ServerMain/ERROR]: [DirectoryProviderSource] Error loading plugin: java.lang.IllegalArgumentException: Directory 'plugins\.paper-remapped\LuckPerms-Fabric-5.4.146.jar' does not contain a paper-plugin.yml or plugin.yml! Could not determine plugin type, cannot load a plugin from it!
+java.lang.RuntimeException: java.lang.IllegalArgumentException: Directory 'plugins\.paper-remapped\LuckPerms-Fabric-5.4.146.jar' does not contain a paper-plugin.yml or plugin.yml! Could not determine plugin type, cannot load a plugin from it!
+	at io.papermc.paper.plugin.provider.source.FileProviderSource.registerProviders(FileProviderSource.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.provider.source.DirectoryProviderSource.registerProviders(DirectoryProviderSource.java:52) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.provider.source.DirectoryProviderSource.registerProviders(DirectoryProviderSource.java:17) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.util.EntrypointUtil.registerProvidersFromSource(EntrypointUtil.java:15) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.PluginInitializerManager.load(PluginInitializerManager.java:113) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.Main.main(Main.java:123) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.PaperBootstrap.boot(PaperBootstrap.java:21) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.Main.main(Main.java:281) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paperclip.Paperclip.lambda$main$0(Paperclip.java:42) ~[app:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.IllegalArgumentException: Directory 'plugins\.paper-remapped\LuckPerms-Fabric-5.4.146.jar' does not contain a paper-plugin.yml or plugin.yml! Could not determine plugin type, cannot load a plugin from it!
+	... 10 more
+[00:46:31] [ServerMain/INFO]: [PluginInitializerManager] Initialized 3 plugins
+[00:46:31] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (3):
+ - Essentials (2.20.1), PaperPlugin (241119-2336-SNAPSHOT), Vault (1.7.3-b131)
+[00:46:36] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[00:46:38] [ServerMain/INFO]: Loaded 1290 recipes
+[00:46:39] [ServerMain/INFO]: Loaded 1399 advancements
+[00:46:39] [Server thread/INFO]: Starting minecraft server version 1.21.1
+[00:46:39] [Server thread/INFO]: Loading properties
+[00:46:39] [Server thread/INFO]: This server is running Paper version 1.21.1-131-ver/1.21.1@84281ce (2024-10-31T17:43:44Z) (Implementing API version 1.21.1-R0.1-SNAPSHOT)
+[00:46:40] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[00:46:40] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[00:46:40] [Server thread/INFO]: Using 4 threads for Netty based IO
+[00:46:41] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 8 worker threads, and population gen parallelism of 8 threads
+[00:46:41] [Server thread/INFO]: Default game type: SURVIVAL
+[00:46:41] [Server thread/INFO]: Generating keypair
+[00:46:41] [Server thread/INFO]: Starting Minecraft server on *:25565
+[00:46:41] [Server thread/INFO]: Using default channel type
+[00:46:41] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[00:46:41] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[00:46:42] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[00:46:42] [Server thread/INFO]: [PaperPlugin] Loading server plugin PaperPlugin v241119-2336-SNAPSHOT
+[00:46:42] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[00:46:42] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[00:46:42] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[00:46:42] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[00:46:42] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[00:46:42] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[00:46:42] [Server thread/INFO]: Preparing level "world"
+[00:46:43] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[00:46:44] [Server thread/INFO]: Time elapsed: 1095 ms
+[00:46:44] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[00:46:44] [Server thread/INFO]: Time elapsed: 122 ms
+[00:46:44] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[00:46:44] [Server thread/INFO]: Time elapsed: 79 ms
+[00:46:44] [Server thread/INFO]: [PaperPlugin] Enabling PaperPlugin v241119-2336-SNAPSHOT
+[00:46:44] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[00:46:44] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[00:46:45] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[00:46:45] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[00:46:45] [Server thread/INFO]: [Essentials] Starting Essentials ban format conversion
+[00:46:45] [Server thread/INFO]: [Essentials] Found 1 files to convert...
+[00:46:45] [Server thread/INFO]: [Essentials] Converted 0/1
+[00:46:45] [Server thread/INFO]: [Essentials] Ban format update complete.
+[00:46:45] [Server thread/INFO]: [Essentials] Attempting to migrate ignore list to UUIDs
+[00:46:45] [Server thread/INFO]: [Essentials] Done converting ignore list.
+[00:46:45] [Server thread/INFO]: [Essentials] Attempting to migrate legacy userdata keys to Configurate
+[00:46:45] [Server thread/INFO]: [Essentials] Done converting legacy userdata keys to Configurate.
+[00:46:45] [Server thread/INFO]: [Essentials] Done converting mail list.
+[00:46:45] [Server thread/INFO]: [Essentials] #===========================================================================#
+[00:46:45] [Server thread/INFO]: [Essentials]  EssentialsX will now purge any NPC accounts which were incorrectly created.
+[00:46:45] [Server thread/INFO]: [Essentials]  Only NPC accounts with the default starting balance will be deleted. If
+[00:46:45] [Server thread/INFO]: [Essentials]  they turn out to be valid NPC accounts, they will be re-created as needed.
+[00:46:45] [Server thread/INFO]: [Essentials]  Any files deleted here will be backed up to the 
+[00:46:45] [Server thread/INFO]: [Essentials]  "plugins/Essentials/userdata-npc-backup" folder. If you notice any files
+[00:46:45] [Server thread/INFO]: [Essentials]  have been purged incorrectly, you should restore it from the backup and
+[00:46:45] [Server thread/INFO]: [Essentials]  report it to us on GitHub:
+[00:46:45] [Server thread/INFO]: [Essentials]  https://github.com/EssentialsX/Essentials/issues/new/choose
+[00:46:45] [Server thread/INFO]: [Essentials] 
+[00:46:45] [Server thread/INFO]: [Essentials]  NOTE: This is a one-time process and will take several minutes if you have
+[00:46:45] [Server thread/INFO]: [Essentials]  a lot of userdata files! If you interrupt this process, EssentialsX will
+[00:46:45] [Server thread/INFO]: [Essentials]  skip the process until you rename or remove the backup folder.
+[00:46:45] [Server thread/INFO]: [Essentials] #===========================================================================#
+[00:46:45] [Server thread/INFO]: [Essentials] Found ~1 files under "plugins/Essentials/userdata"...
+[00:46:45] [Server thread/INFO]: [Essentials] #===========================================================================#
+[00:46:45] [Server thread/INFO]: [Essentials]  EssentialsX has finished purging NPC accounts.
+[00:46:45] [Server thread/INFO]: [Essentials] 
+[00:46:45] [Server thread/INFO]: [Essentials]  Deleted accounts: 0
+[00:46:45] [Server thread/INFO]: [Essentials]  Total accounts processed: 1
+[00:46:45] [Server thread/INFO]: [Essentials] 
+[00:46:45] [Server thread/INFO]: [Essentials]  Purged accounts have been backed up to
+[00:46:45] [Server thread/INFO]: [Essentials]  "plugins/Essentials/userdata-npc-backup", and can be restored from there
+[00:46:45] [Server thread/INFO]: [Essentials]  if needed. Please report any files which have been incorrectly deleted
+[00:46:45] [Server thread/INFO]: [Essentials]  to us on GitHub:
+[00:46:45] [Server thread/INFO]: [Essentials]  https://github.com/EssentialsX/Essentials/issues/new/choose
+[00:46:45] [Server thread/INFO]: [Essentials] #===========================================================================#
+[00:46:46] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
+[00:46:46] [Server thread/INFO]: [Essentials] Using locale en_GB
+[00:46:46] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[00:46:46] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[00:46:46] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[00:46:46] [Server thread/INFO]: [Essentials] Using superperms-based permissions.
+[00:46:46] [Server thread/INFO]: [spark] Starting background profiler...
+[00:46:46] [Server thread/INFO]: [spark] The async-profiler engine is not supported for your os/arch (windows11/amd64), so the built-in Java engine will be used instead.
+[00:46:46] [Server thread/INFO]: Done preparing level "world" (3.928s)
+[00:46:46] [Server thread/INFO]: Running delayed init tasks
+[00:46:46] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[00:46:46] [Server thread/INFO]: Done (18.482s)! For help, type "help"
+[00:46:46] [Server thread/INFO]: Timings Reset
+[00:46:46] [Craft Scheduler Thread - 3 - Essentials/INFO]: [Essentials] Fetching version information...
+[00:46:46] [Craft Scheduler Thread - 2 - Vault/INFO]: [Vault] Checking for Updates ... 
+[00:46:46] [Craft Scheduler Thread - 2 - Vault/INFO]: [Vault] No new version available
+[00:47:06] [User Authenticator #0/INFO]: UUID of player AlbertTheYoung is 63edd68d-b87c-4eae-842e-da4ab8fb87ac
+[00:47:07] [Server thread/INFO]: AlbertTheYoung joined the game
+[00:47:07] [Server thread/INFO]: AlbertTheYoung[/127.0.0.1:1055] logged in with entity id 122 at ([world]6.385025156551771, 72.00063554902955, 14.761112970447659)
+[00:47:15] [Server thread/INFO]: AlbertTheYoung issued server command: /casino
+[00:47:23] [Server thread/INFO]: AlbertTheYoung lost connection: Disconnected
+[00:47:23] [Server thread/INFO]: AlbertTheYoung left the game
+[00:47:25] [Server thread/INFO]: Stopping server
+[00:47:25] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
+[00:47:25] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
+[00:47:25] [Server thread/INFO]: [PaperPlugin] Disabling PaperPlugin v241119-2336-SNAPSHOT
+[00:47:25] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[00:47:25] [Server thread/INFO]: Saving players
+[00:47:25] [Server thread/INFO]: Saving worlds
+[00:47:25] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[00:47:25] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[00:47:25] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[00:47:25] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[00:47:26] [Server thread/INFO]: [ChunkHolderManager] Saved 625 block chunks, 625 entity chunks, 0 poi chunks in world 'world' in 1.06s
+[00:47:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[00:47:26] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[00:47:26] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[00:47:26] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[00:47:26] [Server thread/INFO]: [ChunkHolderManager] Saved 49 block chunks, 49 entity chunks, 0 poi chunks in world 'world_nether' in 0.05s
+[00:47:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[00:47:26] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[00:47:26] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[00:47:26] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[00:47:26] [Server thread/INFO]: [ChunkHolderManager] Saved 49 block chunks, 49 entity chunks, 0 poi chunks in world 'world_the_end' in 0.03s
+[00:47:26] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[00:47:26] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[00:47:26] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[00:47:26] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
