@@ -1,0 +1,69 @@
+[00:14:49] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.4+7-LTS; Microsoft Microsoft-9889606) on Windows 11 10.0 (amd64)
+[00:14:49] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.1-131-ver/1.21.1@84281ce (2024-10-31T17:43:44Z) for Minecraft 1.21.1
+[00:14:49] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[00:14:50] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PaperPlugin-241119-2314-SNAPSHOT.jar'...
+[00:14:51] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PaperPlugin-241119-2314-SNAPSHOT.jar' in 1152ms.
+[00:14:51] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
+[00:14:51] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
+ - PaperPlugin (241119-2314-SNAPSHOT)
+[00:14:56] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[00:14:59] [ServerMain/INFO]: Loaded 1290 recipes
+[00:14:59] [ServerMain/INFO]: Loaded 1399 advancements
+[00:14:59] [Server thread/INFO]: Starting minecraft server version 1.21.1
+[00:14:59] [Server thread/INFO]: Loading properties
+[00:15:00] [Server thread/INFO]: This server is running Paper version 1.21.1-131-ver/1.21.1@84281ce (2024-10-31T17:43:44Z) (Implementing API version 1.21.1-R0.1-SNAPSHOT)
+[00:15:00] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[00:15:00] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[00:15:00] [Server thread/INFO]: Using 4 threads for Netty based IO
+[00:15:01] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 8 worker threads, and population gen parallelism of 8 threads
+[00:15:01] [Server thread/INFO]: Default game type: SURVIVAL
+[00:15:01] [Server thread/INFO]: Generating keypair
+[00:15:01] [Server thread/INFO]: Starting Minecraft server on *:25565
+[00:15:01] [Server thread/INFO]: Using default channel type
+[00:15:01] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[00:15:01] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[00:15:01] [Server thread/INFO]: [PaperPlugin] Loading server plugin PaperPlugin v241119-2314-SNAPSHOT
+[00:15:01] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[00:15:01] [Server thread/INFO]: Preparing level "world"
+[00:15:02] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[00:15:03] [Server thread/INFO]: Time elapsed: 1008 ms
+[00:15:03] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[00:15:03] [Server thread/INFO]: Time elapsed: 124 ms
+[00:15:03] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[00:15:03] [Server thread/INFO]: Time elapsed: 67 ms
+[00:15:03] [Server thread/INFO]: [PaperPlugin] Enabling PaperPlugin v241119-2314-SNAPSHOT
+[00:15:03] [Server thread/INFO]: [spark] Starting background profiler...
+[00:15:03] [Server thread/INFO]: [spark] The async-profiler engine is not supported for your os/arch (windows11/amd64), so the built-in Java engine will be used instead.
+[00:15:03] [Server thread/INFO]: Done preparing level "world" (2.068s)
+[00:15:04] [Server thread/INFO]: Running delayed init tasks
+[00:15:04] [Server thread/INFO]: Done (15.880s)! For help, type "help"
+[00:15:04] [Server thread/INFO]: Timings Reset
+[00:15:04] [User Authenticator #0/INFO]: UUID of player AlbertTheYoung is 63edd68d-b87c-4eae-842e-da4ab8fb87ac
+[00:15:05] [Server thread/INFO]: AlbertTheYoung joined the game
+[00:15:05] [Server thread/INFO]: AlbertTheYoung[/127.0.0.1:64277] logged in with entity id 100 at ([world]3.6883139126860014, 70.0, 13.298649284678246)
+[00:15:09] [Server thread/INFO]: AlbertTheYoung issued server command: /casino
+[00:15:23] [Server thread/INFO]: AlbertTheYoung lost connection: Disconnected
+[00:15:23] [Server thread/INFO]: AlbertTheYoung left the game
+[00:15:25] [Server thread/INFO]: Stopping server
+[00:15:25] [Server thread/INFO]: [PaperPlugin] Disabling PaperPlugin v241119-2314-SNAPSHOT
+[00:15:25] [Server thread/INFO]: Saving players
+[00:15:25] [Server thread/INFO]: Saving worlds
+[00:15:25] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[00:15:25] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[00:15:25] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[00:15:25] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Saved 625 block chunks, 625 entity chunks, 0 poi chunks in world 'world' in 1.07s
+[00:15:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Saved 49 block chunks, 49 entity chunks, 0 poi chunks in world 'world_nether' in 0.04s
+[00:15:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[00:15:26] [Server thread/INFO]: [ChunkHolderManager] Saved 49 block chunks, 49 entity chunks, 0 poi chunks in world 'world_the_end' in 0.03s
+[00:15:26] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[00:15:26] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[00:15:26] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[00:15:26] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved

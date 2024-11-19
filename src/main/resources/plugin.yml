@@ -1,0 +1,25 @@
+main: ${PACKAGE}.${NAME}
+name: ${NAME}
+version: "${VERSION}"
+api-version: "1.21.1"
+author: AUTHOR
+description: DESCRIPTION
+commands:
+  ex:
+    description: Base command for EXAMPLE
+    usage: "For a list of commands, type /ex help"
+    aliases: [example]
+  casino:
+    description: Open Casino GUI
+    usage: "For a list of commands, type /casino help"
+    aliases: [c]
+
+permissions:
+  gamblingcasino.play:
+    description: Default Play Permission
+    default: true
+  gamblingcasino.*:
+    description: Grants all other permissions
+    default: false
+    children:
+      gamblingcasino.play: true
