@@ -16,8 +16,8 @@ timestamps:
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1732060043455
-  login: 1732060027795
+  logout: 1732111423991
+  login: 1732110508230
 money: '0'
 last-account-name: AlbertTheYoung
 logoutlocation:
@@ -26,5 +26,5 @@ logoutlocation:
   x: 6.385025156551771
   y: 72.00063554902955
   z: 14.761112970447659
-  yaw: 27.300004959106445
-  pitch: 37.50000762939453
+  yaw: 19.800016403198242
+  pitch: 25.05000114440918

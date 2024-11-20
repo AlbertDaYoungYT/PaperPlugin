@@ -26,8 +26,15 @@ public class CasinoCommand implements CommandExecutor {
 			if (!(sender instanceof Player)) {
 				sender.sendMessage("This command can only be run by a player.");
 			} else {
-				Player player = (Player) sender;
-                MainCasino.MAINCASINOMEN_GUI.open(player);
+                Player player = (Player) sender;
+                if (args.length < 1) {
+                    MainCasino.MAINCASINOMEN_GUI.open(player);
+                } else
+                if (args.length < 2) {
+                    if (args[0].equalsIgnoreCase("play")) {
+                        
+                    }
+                }
 			}
 			return true;
 		}
