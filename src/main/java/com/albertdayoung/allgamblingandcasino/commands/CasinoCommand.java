@@ -28,7 +28,7 @@ public class CasinoCommand implements CommandExecutor {
 			} else {
                 Player player = (Player) sender;
                 if (args.length < 1) {
-                    MainCasino.MAINCASINO_GUI.open(player);
+                    MainCasino.open(player);
                 } else
                 if (args.length < 2) {
                     if (args[0].equalsIgnoreCase("play")) {

@@ -1,25 +1,28 @@
 package com.albertdayoung.allgamblingandcasino.gui;
 
-import org.bukkit.Material;
+import org.bukkit.entity.Player;
 
-import com.albertdayoung.allgamblingandcasino.gui.components.FourRowCasinoBorder;
+import com.albertdayoung.allgamblingandcasino.gui.components.BlankingFill;
+import com.albertdayoung.allgamblingandcasino.gui.components.TwoItemCasinoFill;
+import com.albertdayoung.allgamblingandcasino.gui.components.buttons.CasinoPlayRouletteButton;
+import com.albertdayoung.allgamblingandcasino.gui.components.buttons.PlayerCasinoAccountButton;
 
 import dev.triumphteam.gui.paper.Gui;
-import dev.triumphteam.gui.paper.builder.item.ItemBuilder;
 import net.kyori.adventure.text.Component;
 
 public class MainCasino {
-    public static final Gui MAINCASINO_GUI = Gui.of(3)
-        .title(Component.text("Casino"))
-        .statelessComponent(container -> { // We use stateless since we don't need any updates for this example
-            FourRowCasinoBorder.loopInvoke(container);
-            container.setItem(2, 5, ItemBuilder.from(Material.PLAYER_HEAD)
-                    .name(Component.text("Click me!"))
-                    .asGuiItem((player, context) -> {
-                        player.sendMessage("You have clicked on the diamond item!");
-                    })
-            );
-        })
-        .build();
+    public static void open(Player _player) {
+        Gui.of(3)
+            .title(Component.text("Casino"))
+            .statelessComponent(container -> {
+                TwoItemCasinoFill.loopInvoke(container, 1, 9, 1, 3);
+                BlankingFill.invoke(container, 2, 8, 2, 2);
 
+                PlayerCasinoAccountButton.invoke(container, _player, 2, 3);
+                CasinoPlayRouletteButton.invoke(container, _player, 2, 5);
+                
+            })
+            .build()
+            .open(_player);
+    }
 }

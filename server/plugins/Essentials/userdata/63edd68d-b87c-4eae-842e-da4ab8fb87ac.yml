@@ -3,7 +3,7 @@ teleportauto: false
 godmode: false
 muted: false
 jailed: false
-ip-address: 127.0.0.1
+ip-address: ''
 afk: false
 socialspy: false
 npc: false
@@ -16,15 +16,14 @@ timestamps:
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1732111423991
-  login: 1732110508230
+  logout: 1732145144279
+  login: 0
 money: '0'
-last-account-name: AlbertTheYoung
 logoutlocation:
   world: 6ec60cc9-4cdb-44c0-a2d2-b21d8a78bdf5
   world-name: world
-  x: 6.385025156551771
-  y: 72.00063554902955
-  z: 14.761112970447659
-  yaw: 19.800016403198242
-  pitch: 25.05000114440918
+  x: 2.433017275569425
+  y: 70.0
+  z: 12.681686179888038
+  yaw: 11.699811935424805
+  pitch: 38.85000228881836

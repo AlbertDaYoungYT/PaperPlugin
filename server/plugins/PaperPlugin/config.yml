@@ -1,1 +1,22 @@
 # A journey of 1,000 lines starts with a single char
+translation:
+  gui:
+    casino-title: "Casino"
+    casino-border: " "
+
+    casino-back-button-title: "Back"
+    casino-player-button-title: "Casino Account"
+    casino-play-roulette-button-title: "Play Roulette"
+
+    casino-player-button-lore: "Check your account stats"
+    casino-play-roulette-button-lore: " "
+
+roulette:
+  single-number-payout-amount: 35
+  two-number-payout-amount: 17
+  three-number-payout-amount: 11
+  four-number-payout-amount: 8
+  five-number-payout-amount: 6
+  six-number-payout-amount: 5
+
+  group-twelve-payout-amount: 3

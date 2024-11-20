@@ -1,2 +1,5 @@
 .gradle/
 build/
+
+server/world/
+server/logs/
