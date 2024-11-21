@@ -12,11 +12,15 @@ translation:
     casino-play-roulette-button-lore: " "
 
 roulette:
-  single-number-payout-amount: 35
-  two-number-payout-amount: 17
-  three-number-payout-amount: 11
-  four-number-payout-amount: 8
-  five-number-payout-amount: 6
-  six-number-payout-amount: 5
+  green-number-payout-amount: 36.0
+  single-number-payout-amount: 35.0
+  two-number-payout-amount: 17.0
+  three-number-payout-amount: 11.0
+  four-number-payout-amount: 8.0
+  five-number-payout-amount: 6.0
+  six-number-payout-amount: 5.0
 
-  group-twelve-payout-amount: 3
+  group-twelve-payout-amount: 2.0
+  halfs-eightteen-payout-amount: 1.5
+  red-black-eightteen-payout-amount: 1.5
+  odds-even-eightteen-payout-amount: 1.5

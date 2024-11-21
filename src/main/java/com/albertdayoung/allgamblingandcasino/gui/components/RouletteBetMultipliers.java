@@ -4,28 +4,35 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
+import com.albertdayoung.allgamblingandcasino.roulette.RouletteGame;
+
 import dev.triumphteam.gui.container.GuiContainer;
 import dev.triumphteam.gui.paper.builder.item.ItemBuilder;
+import dev.triumphteam.nova.MutableState;
 import net.kyori.adventure.text.Component;
 
 public class RouletteBetMultipliers {
     
-    public static final Material MULTIPLIERSTAT_MATERIAL = Material.GREEN_WOOL;
+    public static final Material MULTIPLIERSTAT_MATERIAL = Material.GOLD_BLOCK;
     public static final Material PLUSMINUS_MATERIAL = Material.ARROW;
 
-    public static final void invoke(GuiContainer<Player, ItemStack> container) {
+    public static final void invoke(GuiContainer<Player, ItemStack> container, RouletteGame game, MutableState<Integer> betMultiplierValue) {
         container.setItem(6, 5, ItemBuilder.from(MULTIPLIERSTAT_MATERIAL)
-                                                    .name(Component.text(String.format("Current Bet Multiplier Amount", 5)))
-                                                    .amount(5)
+                                                    .name(Component.text(String.format("Bet %s", betMultiplierValue.get())))
+                                                    .amount(betMultiplierValue.get())
                                                     .asGuiItem()
                                         );
         container.setItem(6, 4, ItemBuilder.from(PLUSMINUS_MATERIAL)
                                                     .name(Component.text("Decrement bet multiplier"))
-                                                    .asGuiItem()
+                                                    .asGuiItem((player, context) -> {
+                                                        game.decrementBetMultiplier(1);
+                                                    })
                                         );
         container.setItem(6, 6, ItemBuilder.from(PLUSMINUS_MATERIAL)
                                                     .name(Component.text("Increment bet multiplier"))
-                                                    .asGuiItem()
+                                                    .asGuiItem((player, context) -> {
+                                                        game.incrementBetMultiplier(1);
+                                                    })
                                         );
 
     }

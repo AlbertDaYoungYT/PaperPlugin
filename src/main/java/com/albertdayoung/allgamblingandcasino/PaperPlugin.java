@@ -2,11 +2,14 @@ package com.albertdayoung.allgamblingandcasino;
 
 import java.io.File;
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.albertdayoung.allgamblingandcasino.commands.CasinoCommand;
+import com.albertdayoung.allgamblingandcasino.gui.PlayRouletteMain;
+import com.albertdayoung.allgamblingandcasino.gui.PlayerAccount;
 
 import io.papermc.lib.PaperLib;
 import net.milkbowl.vault.chat.Chat;
@@ -19,6 +22,7 @@ import net.milkbowl.vault.permission.Permission;
 - TODO: Plinko
 - TODO: Slots
 - TODO: Blackjack
+- TODO: Bet on next Death
 */
 
 
@@ -46,6 +50,9 @@ public class PaperPlugin extends JavaPlugin {
         }
         setupPermissions();
         setupChat();
+
+        Bukkit.getServer().getPluginManager().registerEvents(new PlayerAccount(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new PlayRouletteMain(), this);
 		
 		this.getCommand("casino").setExecutor(new CasinoCommand(this));
 		

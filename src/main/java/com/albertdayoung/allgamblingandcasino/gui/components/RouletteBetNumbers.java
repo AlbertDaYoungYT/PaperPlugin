@@ -5,6 +5,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
+import com.albertdayoung.allgamblingandcasino.roulette.RouletteGame;
+
 import dev.triumphteam.gui.container.GuiContainer;
 import dev.triumphteam.gui.paper.builder.item.ItemBuilder;
 import net.kyori.adventure.text.Component;
@@ -13,9 +15,10 @@ public class RouletteBetNumbers {
 
     public static final Material oddItem = Material.RED_WOOL;
     public static final Material evenItem = Material.BLACK_WOOL;
+    public static final Material zeroItem = Material.LIME_WOOL;
     
     
-    public static final void invoke(GuiContainer<Player, ItemStack> container) {
+    public static final void invoke(GuiContainer<Player, ItemStack> container, RouletteGame game) {
         @NotNull
         Material usedMaterial;
         int i = 1;
@@ -37,5 +40,10 @@ public class RouletteBetNumbers {
                 i++;
             }
         }
+                
+        container.setItem(6, 1, ItemBuilder.from(zeroItem)
+                                                    .name(Component.text(String.format("Bet on (%s)", 0)))
+                                                    .asGuiItem()
+                                        );
     }
 }
