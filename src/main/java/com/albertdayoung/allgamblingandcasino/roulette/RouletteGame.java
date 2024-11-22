@@ -63,6 +63,7 @@ public class RouletteGame {
         finalBetAmount = finalBetAmount - (this.betAmount * this.betMultiplier.get());
 
         PaperPlugin.getEconomy().depositPlayer(player, finalBetAmount);
+        this.player.getPlayer().sendMessage(String.format("You won $%s", finalBetAmount));
     }
 
     public final int calcBetAmount(int f, int roll) {

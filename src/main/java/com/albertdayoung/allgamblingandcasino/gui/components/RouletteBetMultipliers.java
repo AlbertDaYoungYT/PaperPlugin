@@ -18,9 +18,20 @@ public class RouletteBetMultipliers {
 
     public static final void invoke(GuiContainer<Player, ItemStack> container, RouletteGame game, MutableState<Integer> betMultiplierValue) {
         container.setItem(6, 5, ItemBuilder.from(MULTIPLIERSTAT_MATERIAL)
-                                                    .name(Component.text(String.format("Bet %s", betMultiplierValue.get())))
+                                                    .name(Component.text(String.format("Bet %s time(s)", betMultiplierValue.get())))
                                                     .amount(betMultiplierValue.get())
-                                                    .asGuiItem()
+                                                    .asGuiItem((player, context) -> {
+                                                        if (game.getBets().isEmpty()) {
+                                                            player.sendMessage("You haven't bet on anything");
+                                                        } else {
+                                                            game.roll();
+                                                            player.sendMessage(
+                                                                game.getBets().toString() + ", " + 
+                                                                game.getBetMultipliers().toString()
+                                                            );
+
+                                                        }
+                                                    })
                                         );
         container.setItem(6, 4, ItemBuilder.from(PLUSMINUS_MATERIAL)
                                                     .name(Component.text("Decrement bet multiplier"))

@@ -19,11 +19,15 @@ public class RouletteBetRedBlack {
     public static final void invoke(GuiContainer<Player, ItemStack> container, RouletteGame game) {
         container.setItem(6, 7, ItemBuilder.from(RED_MATERIAL)
                                                     .name(Component.text("Bet Red"))
-                                                    .asGuiItem()
+                                                    .asGuiItem((player, context) -> {
+                                                        game.addBet("RED");
+                                                    })
                                         );
         container.setItem(6, 8, ItemBuilder.from(BLACK_MATERIAL)
                                                     .name(Component.text("Bet Black"))
-                                                    .asGuiItem()
+                                                    .asGuiItem((player, context) -> {
+                                                        game.addBet("BLACK");
+                                                    })
                                         );
     }
 }

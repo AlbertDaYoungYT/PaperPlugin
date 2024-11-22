@@ -16,12 +16,14 @@ public class RouletteBetNumbers {
     public static final Material oddItem = Material.RED_WOOL;
     public static final Material evenItem = Material.BLACK_WOOL;
     public static final Material zeroItem = Material.LIME_WOOL;
-    
-    
+
+    public static int i = 1;
+        
+        
     public static final void invoke(GuiContainer<Player, ItemStack> container, RouletteGame game) {
         @NotNull
         Material usedMaterial;
-        int i = 1;
+        i = 1;
 
         for (int row = 1;row <= 4;row++) {
             for (int column = 1;column <= 9;column++) {
@@ -34,7 +36,9 @@ public class RouletteBetNumbers {
                 container.setItem(row, column, ItemBuilder.from(usedMaterial)
                                                             .name(Component.text(String.format("Bet on (%s)", i)))
                                                             .amount(i)
-                                                            .asGuiItem()
+                                                            .asGuiItem((player, context) -> {
+                                                                game.addBet(String.valueOf(i));
+                                                            })
                                                 );
 
                 i++;
@@ -43,7 +47,9 @@ public class RouletteBetNumbers {
                 
         container.setItem(6, 1, ItemBuilder.from(zeroItem)
                                                     .name(Component.text(String.format("Bet on (%s)", 0)))
-                                                    .asGuiItem()
+                                                    .asGuiItem((player, context) -> {
+                                                        game.addBet(String.valueOf(0));
+                                                    })
                                         );
     }
 }
