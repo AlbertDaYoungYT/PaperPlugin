@@ -6,10 +6,14 @@ translation:
 
     casino-back-button-title: "Back"
     casino-player-button-title: "Casino Account"
-    casino-play-roulette-button-title: "Play Roulette"
+    casino-play-roulette-button-title: "Play Roulette (UNFINISHED)"
 
     casino-player-button-lore: "Check your account stats"
     casino-play-roulette-button-lore: " "
+
+
+    leaderboard-button-title: "Check the Leaderboard"
+    leaderboard-button-lore: "Leaderboard is currently unfinished!"
 
 roulette:
   green-number-payout-amount: 36.0

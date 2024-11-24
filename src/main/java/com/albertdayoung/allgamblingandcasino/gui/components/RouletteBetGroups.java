@@ -4,7 +4,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import com.albertdayoung.allgamblingandcasino.roulette.RouletteGame;
+import com.albertdayoung.allgamblingandcasino.gambling.RouletteGame;
 
 import dev.triumphteam.gui.container.GuiContainer;
 import dev.triumphteam.gui.paper.builder.item.ItemBuilder;

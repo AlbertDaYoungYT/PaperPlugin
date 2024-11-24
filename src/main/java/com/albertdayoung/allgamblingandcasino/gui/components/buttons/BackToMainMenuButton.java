@@ -4,7 +4,6 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import com.albertdayoung.allgamblingandcasino.PaperPlugin;
 import com.albertdayoung.allgamblingandcasino.gui.MainCasino;
 
 import dev.triumphteam.gui.container.GuiContainer;
@@ -14,9 +13,9 @@ import net.kyori.adventure.text.Component;
 public class BackToMainMenuButton {
     
 
-    public static final void invoke(GuiContainer<Player, ItemStack> container, int row, int column) {
-        container.setItem(row, column, ItemBuilder.from(Material.ARROW)
-                .name(Component.text(PaperPlugin.mainConfig.getString("translation.gui.casino-back-button-title")))
+    public static void invoke(GuiContainer<Player, ItemStack> container, int row, int column) {
+        container.setItem(row, column, ItemBuilder.from(Material.RED_BED)
+                .name(Component.text("Back"))
                 .asGuiItem((player, context) -> {
                     MainCasino.open(player);
                 })

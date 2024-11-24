@@ -6,17 +6,17 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-import com.albertdayoung.allgamblingandcasino.PaperPlugin;
+import com.albertdayoung.allgamblingandcasino.PeakGambling;
 import com.albertdayoung.allgamblingandcasino.gui.MainCasino;
 
 
 public class CasinoCommand implements CommandExecutor {
 
     @SuppressWarnings("unused")
-    private final PaperPlugin plugin;
+    private final PeakGambling plugin;
 
 
-    public CasinoCommand(PaperPlugin plugin) {
+    public CasinoCommand(PeakGambling plugin) {
         this.plugin = plugin;
     }
 

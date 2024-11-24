@@ -1,252 +1,1159 @@
-[14:48:49] [ServerMain/INFO]: [bootstrap] Running Java 21 (Java HotSpot(TM) 64-Bit Server VM 21.0.5+9-LTS-239; Oracle Corporation null) on Windows 11 10.0 (amd64)
-[14:48:49] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.1-131-ver/1.21.1@84281ce (2024-10-31T17:43:44Z) for Minecraft 1.21.1
-[14:48:49] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
-[14:48:50] [ServerMain/INFO]: [PluginInitializerManager] Initialized 4 plugins
-[14:48:50] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (4):
- - Essentials (2.20.1), LuckPerms (5.4.146), PaperPlugin (1.0.0), Vault (1.7.3-b131)
-[14:48:55] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[14:48:58] [ServerMain/INFO]: Loaded 1290 recipes
-[14:48:58] [ServerMain/INFO]: Loaded 1399 advancements
-[14:48:59] [Server thread/INFO]: Starting minecraft server version 1.21.1
-[14:48:59] [Server thread/INFO]: Loading properties
-[14:48:59] [Server thread/INFO]: This server is running Paper version 1.21.1-131-ver/1.21.1@84281ce (2024-10-31T17:43:44Z) (Implementing API version 1.21.1-R0.1-SNAPSHOT)
-[14:49:00] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
-[14:49:00] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[14:49:00] [Server thread/INFO]: Using 4 threads for Netty based IO
-[14:49:01] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 4 worker threads, and population gen parallelism of 4 threads
-[14:49:01] [Server thread/INFO]: Default game type: SURVIVAL
-[14:49:01] [Server thread/INFO]: Generating keypair
-[14:49:01] [Server thread/INFO]: Starting Minecraft server on *:25565
-[14:49:01] [Server thread/INFO]: Using default channel type
-[14:49:01] [Server thread/INFO]: Paper: Using Java compression from Velocity.
-[14:49:01] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
-[14:49:01] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
-[14:49:02] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
-[14:49:02] [Server thread/INFO]: [PaperPlugin] Loading server plugin PaperPlugin v1.0.0
-[14:49:02] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
-[14:49:02] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[14:49:02] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
-[14:49:02] [Server thread/INFO]:         __    
-[14:49:02] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
-[14:49:02] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
-[14:49:02] [Server thread/INFO]: 
-[14:49:02] [Server thread/INFO]: [LuckPerms] Loading configuration...
-[14:49:03] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
-[14:49:03] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
-[14:49:03] [Server thread/INFO]: [LuckPerms] Performing initial data load...
-[14:49:03] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 1447ms)
-[14:49:03] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
-[14:49:03] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
-[14:49:04] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
-[14:49:04] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
-[14:49:04] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
-[14:49:04] [Server thread/INFO]: Preparing level "world"
-[14:49:05] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[14:49:06] [Server thread/INFO]: Time elapsed: 965 ms
-[14:49:06] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
-[14:49:06] [Server thread/INFO]: Time elapsed: 151 ms
-[14:49:06] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
-[14:49:06] [Server thread/INFO]: Time elapsed: 49 ms
-[14:49:06] [Server thread/INFO]: [PaperPlugin] Enabling PaperPlugin v1.0.0
-[14:49:06] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
-[14:49:06] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
-[14:49:07] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
-[14:49:07] [Server thread/INFO]: [Essentials] No kits found to migrate.
-[14:49:07] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
-[14:49:07] [Server thread/INFO]: [Essentials] Using locale en_GB
-[14:49:07] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
-[14:49:08] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
-[14:49:08] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
-[14:49:08] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
-[14:49:08] [Server thread/INFO]: [spark] Starting background profiler...
-[14:49:08] [Server thread/INFO]: [spark] The async-profiler engine is not supported for your os/arch (windows11/amd64), so the built-in Java engine will be used instead.
-[14:49:08] [Server thread/INFO]: Done preparing level "world" (4.019s)
-[14:49:08] [Server thread/INFO]: Running delayed init tasks
-[14:49:08] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
-[14:49:08] [Server thread/INFO]: Done (20.420s)! For help, type "help"
-[14:49:08] [Craft Scheduler Thread - 2 - Essentials/INFO]: [Essentials] Fetching version information...
-[14:49:08] [Server thread/INFO]: Timings Reset
-[14:49:08] [Craft Scheduler Thread - 5 - Vault/INFO]: [Vault] Checking for Updates ... 
-[14:49:08] [Craft Scheduler Thread - 5 - Vault/INFO]: [Vault] No new version available
-[14:49:09] [Server thread/INFO]: AlbertTheYoung (/127.0.0.1:63853) lost connection: Disconnected
-[14:49:14] [Server thread/INFO]: AlbertTheYoung (/127.0.0.1:63862) lost connection: Disconnected
-[14:50:16] [User Authenticator #0/INFO]: UUID of player AlbertTheYoung is 63edd68d-b87c-4eae-842e-da4ab8fb87ac
-[14:50:17] [Server thread/INFO]: AlbertTheYoung joined the game
-[14:50:18] [Server thread/INFO]: AlbertTheYoung[/127.0.0.1:63919] logged in with entity id 111 at ([world]2.2467610859569587, 70.0, 13.419144278489798)
-[14:50:18] [Server thread/WARN]: [Essentials] Permissions lag notice with (LuckPermsHandler). Response took 68.607700ms. Summary: Getting group for AlbertTheYoung
-[14:50:24] [Server thread/INFO]: AlbertTheYoung issued server command: /c
-[14:50:25] [Server thread/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[14:51:41] [Server thread/INFO]: AlbertTheYoung lost connection: Disconnected
-[14:51:41] [Server thread/INFO]: AlbertTheYoung left the game
-[15:41:35] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2989740ms or 59794 ticks behind
-[19:08:00] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 12370133ms or 247402 ticks behind
-[19:11:14] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
-[19:11:14] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
-[19:11:14] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[19:11:14] [Server thread/INFO]: Using 4 threads for Netty based IO
-[19:11:14] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
-[19:11:14] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
-[19:11:14] [Server thread/ERROR]: [Essentials] There's a good chance you're reloading your server right now. If that's the case, why do you hate yourself? Expect no support from the EssentialsX team when using /reload.
-[19:11:14] [Server thread/INFO]: [PaperPlugin] Disabling PaperPlugin v1.0.0
-[19:11:14] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
-[19:11:14] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
-[19:11:14] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
-[19:11:14] [Server thread/INFO]: [LuckPerms] Closing storage...
-[19:11:14] [Server thread/INFO]: [LuckPerms] Goodbye!
-[19:11:15] [Server thread/INFO]: Loaded 1290 recipes
-[19:11:15] [Server thread/INFO]: Loaded 1399 advancements
-[19:11:16] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
-[19:11:16] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PaperPlugin-1.0.0.jar'...
-[19:11:17] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PaperPlugin-1.0.0.jar' in 1475ms.
-[19:11:17] [Server thread/INFO]: [PluginInitializerManager] Initialized 4 plugins
-[19:11:17] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (4):
- - Essentials (2.20.1), LuckPerms (5.4.146), PaperPlugin (1.0.0), Vault (1.7.3-b131)
-[19:11:17] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
-[19:11:18] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
-[19:11:18] [Server thread/INFO]: [PaperPlugin] Loading server plugin PaperPlugin v1.0.0
-[19:11:18] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
-[19:11:18] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[19:11:18] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
-[19:11:19] [Server thread/INFO]:         __    
-[19:11:19] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
-[19:11:19] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
-[19:11:19] [Server thread/INFO]: 
-[19:11:19] [Server thread/INFO]: [LuckPerms] Loading configuration...
-[19:11:20] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
-[19:11:21] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
-[19:11:21] [Server thread/INFO]: [LuckPerms] Performing initial data load...
-[19:11:21] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 3209ms)
-[19:11:21] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
-[19:11:21] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
-[19:11:22] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
-[19:11:22] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
-[19:11:22] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
-[19:11:22] [Server thread/INFO]: [PaperPlugin] Enabling PaperPlugin v1.0.0
-[19:11:22] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
-[19:11:22] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
-[19:11:23] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
-[19:11:23] [Server thread/INFO]: [Essentials] No kits found to migrate.
-[19:11:23] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
-[19:11:23] [Server thread/INFO]: [Essentials] Using locale en_GB
-[19:11:23] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
-[19:11:24] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
-[19:11:24] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
-[19:11:24] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
-[19:11:24] [Server thread/INFO]: CONSOLE: Reload complete.
-[19:11:24] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 9923ms or 198 ticks behind
-[19:11:24] [Server thread/INFO]: Timings Reset
-[19:11:24] [Craft Scheduler Thread - 10 - Essentials/INFO]: [Essentials] Fetching version information...
-[19:11:24] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
-[19:11:24] [Craft Scheduler Thread - 12 - Vault/INFO]: [Vault] Checking for Updates ... 
-[19:11:24] [Craft Scheduler Thread - 12 - Vault/INFO]: [Vault] No new version available
-[19:11:25] [User Authenticator #1/INFO]: UUID of player AlbertTheYoung is 63edd68d-b87c-4eae-842e-da4ab8fb87ac
-[19:11:26] [Server thread/INFO]: AlbertTheYoung joined the game
-[19:11:26] [Server thread/INFO]: AlbertTheYoung[/127.0.0.1:65508] logged in with entity id 287 at ([world]2.2467610859569587, 70.0, 13.419144278489798)
-[19:11:26] [Server thread/WARN]: [Essentials] Permissions lag notice with (LuckPermsHandler). Response took 46.563100ms. Summary: Getting group for AlbertTheYoung
-[19:11:33] [Server thread/INFO]: AlbertTheYoung issued server command: /c
-[19:12:00] [Server thread/INFO]: AlbertTheYoung lost connection: Disconnected
-[19:12:00] [Server thread/INFO]: AlbertTheYoung left the game
-[19:19:53] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 399742ms or 7994 ticks behind
-[19:28:18] [User Authenticator #2/INFO]: UUID of player AlbertTheYoung is 63edd68d-b87c-4eae-842e-da4ab8fb87ac
-[19:28:19] [Server thread/INFO]: AlbertTheYoung joined the game
-[19:28:19] [Server thread/INFO]: AlbertTheYoung[/127.0.0.1:50151] logged in with entity id 358 at ([world]2.2467610859569587, 70.0, 13.419144278489798)
-[19:28:26] [Server thread/INFO]: AlbertTheYoung issued server command: /c
-[19:28:40] [Server thread/INFO]: AlbertTheYoung lost connection: Disconnected
-[19:28:40] [Server thread/INFO]: AlbertTheYoung left the game
-[19:32:32] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
-[19:32:32] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
-[19:32:32] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[19:32:32] [Server thread/INFO]: Using 4 threads for Netty based IO
-[19:32:33] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
-[19:32:33] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
-[19:32:33] [Server thread/ERROR]: [Essentials] There's a good chance you're reloading your server right now. If that's the case, why do you hate yourself? Expect no support from the EssentialsX team when using /reload.
-[19:32:33] [Server thread/INFO]: [PaperPlugin] Disabling PaperPlugin v1.0.0
-[19:32:33] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
-[19:32:33] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
-[19:32:33] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
-[19:32:33] [Server thread/INFO]: [LuckPerms] Closing storage...
-[19:32:33] [Server thread/INFO]: [LuckPerms] Goodbye!
-[19:32:34] [Server thread/INFO]: Loaded 1290 recipes
-[19:32:34] [Server thread/INFO]: Loaded 1399 advancements
-[19:32:35] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
-[19:32:35] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PaperPlugin-1.0.0.jar'...
-[19:32:36] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PaperPlugin-1.0.0.jar' in 1597ms.
-[19:32:36] [Server thread/INFO]: [PluginInitializerManager] Initialized 4 plugins
-[19:32:36] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (4):
- - Essentials (2.20.1), LuckPerms (5.4.146), PaperPlugin (1.0.0), Vault (1.7.3-b131)
-[19:32:37] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
-[19:32:37] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
-[19:32:37] [Server thread/INFO]: [PaperPlugin] Loading server plugin PaperPlugin v1.0.0
-[19:32:37] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
-[19:32:37] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[19:32:37] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
-[19:32:38] [Server thread/INFO]:         __    
-[19:32:38] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
-[19:32:38] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
-[19:32:38] [Server thread/INFO]: 
-[19:32:38] [Server thread/INFO]: [LuckPerms] Loading configuration...
-[19:32:38] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
-[19:32:39] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
-[19:32:39] [Server thread/INFO]: [LuckPerms] Performing initial data load...
-[19:32:39] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 1611ms)
-[19:32:39] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
-[19:32:39] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
-[19:32:39] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
-[19:32:39] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
-[19:32:39] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
-[19:32:39] [Server thread/INFO]: [PaperPlugin] Enabling PaperPlugin v1.0.0
-[19:32:39] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
-[19:32:39] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
-[19:32:40] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
-[19:32:40] [Server thread/INFO]: [Essentials] No kits found to migrate.
-[19:32:41] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
-[19:32:41] [Server thread/INFO]: [Essentials] Using locale en_GB
-[19:32:41] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
-[19:32:41] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
-[19:32:41] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
-[19:32:41] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
-[19:32:41] [Server thread/INFO]: CONSOLE: Reload complete.
-[19:32:41] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 8560ms or 171 ticks behind
-[19:32:41] [Server thread/INFO]: Timings Reset
-[19:32:41] [Craft Scheduler Thread - 19 - Essentials/INFO]: [Essentials] Fetching version information...
-[19:32:41] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
-[19:32:41] [Craft Scheduler Thread - 21 - Vault/INFO]: [Vault] Checking for Updates ... 
-[19:32:41] [Craft Scheduler Thread - 21 - Vault/INFO]: [Vault] No new version available
-[19:33:56] [User Authenticator #3/INFO]: UUID of player AlbertTheYoung is 63edd68d-b87c-4eae-842e-da4ab8fb87ac
-[19:33:57] [Server thread/INFO]: AlbertTheYoung joined the game
-[19:33:57] [Server thread/INFO]: AlbertTheYoung[/127.0.0.1:50308] logged in with entity id 399 at ([world]2.2467610859569587, 70.0, 13.419144278489798)
-[19:34:07] [Server thread/INFO]: AlbertTheYoung issued server command: /c
-[19:34:28] [Server thread/INFO]: AlbertTheYoung issued server command: /c
-[19:34:47] [Server thread/INFO]: AlbertTheYoung issued server command: /c
-[19:36:40] [Server thread/INFO]: AlbertTheYoung lost connection: Disconnected
-[19:36:40] [Server thread/INFO]: AlbertTheYoung left the game
-[19:36:42] [Server thread/INFO]: Stopping server
-[19:36:42] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
-[19:36:42] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
-[19:36:42] [Server thread/INFO]: [PaperPlugin] Disabling PaperPlugin v1.0.0
-[19:36:42] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
-[19:36:42] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
-[19:36:42] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
-[19:36:42] [Server thread/INFO]: [LuckPerms] Closing storage...
-[19:36:42] [Server thread/INFO]: [LuckPerms] Goodbye!
-[19:36:42] [Server thread/INFO]: Saving players
-[19:36:42] [Server thread/INFO]: Saving worlds
-[19:36:42] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[19:36:42] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
-[19:36:42] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
-[19:36:42] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
-[19:36:42] [Server thread/INFO]: [ChunkHolderManager] Saved 4 block chunks, 90 entity chunks, 0 poi chunks in world 'world' in 0.04s
-[19:36:42] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
-[19:36:42] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
-[19:36:42] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
-[19:36:42] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
-[19:36:42] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 4 entity chunks, 0 poi chunks in world 'world_nether' in 0.02s
-[19:36:42] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
-[19:36:42] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
-[19:36:42] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
-[19:36:42] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
-[19:36:42] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 10 entity chunks, 0 poi chunks in world 'world_the_end' in 0.01s
-[19:36:42] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[19:36:42] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[19:36:42] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[19:36:42] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[18:22:19] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.4+7-LTS; Microsoft Microsoft-9889606) on Windows 11 10.0 (amd64)
+[18:22:19] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.1-131-ver/1.21.1@84281ce (2024-10-31T17:43:44Z) for Minecraft 1.21.1
+[18:22:20] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[18:22:20] [ServerMain/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[18:22:20] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (4):
+ - Essentials (2.20.1), LuckPerms (5.4.146), PeakGambling (1.0.0), Vault (1.7.3-b131)
+[18:22:26] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[18:22:28] [ServerMain/INFO]: Loaded 1290 recipes
+[18:22:28] [ServerMain/INFO]: Loaded 1399 advancements
+[18:22:29] [Server thread/INFO]: Starting minecraft server version 1.21.1
+[18:22:29] [Server thread/INFO]: Loading properties
+[18:22:29] [Server thread/INFO]: This server is running Paper version 1.21.1-131-ver/1.21.1@84281ce (2024-10-31T17:43:44Z) (Implementing API version 1.21.1-R0.1-SNAPSHOT)
+[18:22:30] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[18:22:31] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[18:22:31] [Server thread/INFO]: Using 4 threads for Netty based IO
+[18:22:31] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 8 worker threads, and population gen parallelism of 8 threads
+[18:22:32] [Server thread/INFO]: Default game type: SURVIVAL
+[18:22:32] [Server thread/INFO]: Generating keypair
+[18:22:32] [Server thread/INFO]: Starting Minecraft server on *:25565
+[18:22:32] [Server thread/INFO]: Using default channel type
+[18:22:32] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[18:22:32] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[18:22:32] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
+[18:22:32] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[18:22:32] [Server thread/INFO]: [PeakGambling] Loading server plugin PeakGambling v1.0.0
+[18:22:32] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[18:22:32] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[18:22:32] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
+[18:22:33] [Server thread/INFO]:         __    
+[18:22:33] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
+[18:22:33] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[18:22:33] [Server thread/INFO]: 
+[18:22:33] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[18:22:33] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[18:22:34] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[18:22:34] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[18:22:34] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 1391ms)
+[18:22:34] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[18:22:34] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[18:22:34] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[18:22:34] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[18:22:34] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[18:22:34] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[18:22:34] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[18:22:34] [Server thread/WARN]: Whilst this makes it possible to use Velocity, unless access to your server is properly restricted, it also opens up the ability for hackers to connect with any username they choose.
+[18:22:34] [Server thread/WARN]: Please see https://docs.papermc.io/velocity/security for further information.
+[18:22:34] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[18:22:34] [Server thread/INFO]: Preparing level "world"
+[18:22:35] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[18:22:36] [Server thread/INFO]: Time elapsed: 1063 ms
+[18:22:36] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[18:22:36] [Server thread/INFO]: Time elapsed: 230 ms
+[18:22:36] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[18:22:36] [Server thread/INFO]: Time elapsed: 115 ms
+[18:22:36] [Server thread/INFO]: [PeakGambling] Enabling PeakGambling v1.0.0
+[18:22:36] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[18:22:37] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[18:22:37] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[18:22:37] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[18:22:38] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
+[18:22:38] [Server thread/INFO]: [Essentials] Using locale en_GB
+[18:22:38] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[18:22:38] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[18:22:38] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[18:22:38] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[18:22:38] [Server thread/INFO]: [spark] Starting background profiler...
+[18:22:38] [Server thread/INFO]: [spark] The async-profiler engine is not supported for your os/arch (windows11/amd64), so the built-in Java engine will be used instead.
+[18:22:38] [Server thread/INFO]: Done preparing level "world" (3.899s)
+[18:22:38] [Server thread/INFO]: Running delayed init tasks
+[18:22:38] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[18:22:38] [Server thread/INFO]: Done (20.603s)! For help, type "help"
+[18:22:38] [Craft Scheduler Thread - 1 - Essentials/INFO]: [Essentials] Fetching version information...
+[18:22:38] [Server thread/INFO]: Timings Reset
+[18:22:38] [Craft Scheduler Thread - 4 - Vault/INFO]: [Vault] Checking for Updates ... 
+[18:22:38] [Craft Scheduler Thread - 4 - Vault/INFO]: [Vault] No new version available
+[18:23:36] [User Authenticator #0/INFO]: UUID of player AlbertTheYoung is 63edd68d-b87c-4eae-842e-da4ab8fb87ac
+[18:23:37] [Server thread/INFO]: AlbertTheYoung joined the game
+[18:23:37] [Server thread/INFO]: AlbertTheYoung[/192.168.87.183:46590] logged in with entity id 90 at ([world]-1.438221108666444, -56.00676469993787, 8.352109764063904)
+[18:23:37] [Server thread/WARN]: [Essentials] Permissions lag notice with (LuckPermsHandler). Response took 64.929100ms. Summary: Getting group for AlbertTheYoung
+[18:25:02] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[18:25:02] [Server thread/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[18:26:09] [Server thread/INFO]: AlbertTheYoung issued server command: /afk
+[18:47:37] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[18:52:00] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[18:52:00] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[18:52:00] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[18:52:00] [Server thread/INFO]: Using 4 threads for Netty based IO
+[18:52:00] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
+[18:52:00] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
+[18:52:00] [Server thread/ERROR]: [Essentials] There's a good chance you're reloading your server right now. If that's the case, why do you hate yourself? Expect no support from the EssentialsX team when using /reload.
+[18:52:01] [Server thread/INFO]: [PeakGambling] Disabling PeakGambling v1.0.0
+[18:52:01] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[18:52:01] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
+[18:52:01] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[18:52:01] [Server thread/INFO]: [LuckPerms] Closing storage...
+[18:52:01] [Server thread/INFO]: [LuckPerms] Goodbye!
+[18:52:01] [Server thread/INFO]: Loaded 1290 recipes
+[18:52:01] [Server thread/INFO]: Loaded 1399 advancements
+[18:52:01] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
+[18:52:01] [Paper Async Command Builder Thread Pool - 1/ERROR]: Caught previously unhandled exception :
+[18:52:01] [Paper Async Command Builder Thread Pool - 1/ERROR]: Paper Async Command Builder Thread Pool - 1
+java.util.ConcurrentModificationException: null
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:1023) ~[?:?]
+	at java.base/java.util.LinkedHashMap$LinkedValueIterator.next(LinkedHashMap.java:1052) ~[?:?]
+	at net.minecraft.commands.Commands.fillUsableCommands(Commands.java:531) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.sendAsync(Commands.java:496) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.lambda$sendCommands$6(Commands.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[18:52:02] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PeakGambling-1.0.0.jar'...
+[18:52:03] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PeakGambling-1.0.0.jar' in 1220ms.
+[18:52:03] [Server thread/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[18:52:03] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (4):
+ - Essentials (2.20.1), LuckPerms (5.4.146), PeakGambling (1.0.0), Vault (1.7.3-b131)
+[18:52:03] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
+[18:52:03] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[18:52:03] [Server thread/INFO]: [PeakGambling] Loading server plugin PeakGambling v1.0.0
+[18:52:03] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[18:52:03] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[18:52:03] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
+[18:52:04] [Server thread/INFO]:         __    
+[18:52:04] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
+[18:52:04] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[18:52:04] [Server thread/INFO]: 
+[18:52:04] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[18:52:05] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[18:52:06] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[18:52:06] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[18:52:06] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 2937ms)
+[18:52:06] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[18:52:06] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[18:52:07] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[18:52:07] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[18:52:07] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[18:52:07] [Server thread/INFO]: [PeakGambling] Enabling PeakGambling v1.0.0
+[18:52:07] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[18:52:07] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[18:52:07] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[18:52:07] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[18:52:08] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
+[18:52:08] [Server thread/INFO]: [Essentials] Using locale en_GB
+[18:52:08] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[18:52:08] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[18:52:08] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[18:52:08] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[18:52:08] [Server thread/INFO]: CONSOLE: Reload complete.
+[18:52:08] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 7648ms or 152 ticks behind
+[18:52:08] [Server thread/INFO]: Timings Reset
+[18:52:08] [Craft Scheduler Thread - 9 - Essentials/INFO]: [Essentials] Fetching version information...
+[18:52:08] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[18:52:08] [Craft Scheduler Thread - 8 - Vault/INFO]: [Vault] Checking for Updates ... 
+[18:52:08] [Craft Scheduler Thread - 8 - Vault/INFO]: [Vault] No new version available
+[18:52:08] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[18:53:30] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[18:53:30] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[18:53:30] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[18:53:30] [Server thread/INFO]: Using 4 threads for Netty based IO
+[18:53:30] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
+[18:53:30] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
+[18:53:30] [Server thread/ERROR]: [Essentials] There's a good chance you're reloading your server right now. If that's the case, why do you hate yourself? Expect no support from the EssentialsX team when using /reload.
+[18:53:30] [Server thread/INFO]: [PeakGambling] Disabling PeakGambling v1.0.0
+[18:53:30] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[18:53:30] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
+[18:53:30] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[18:53:30] [Server thread/INFO]: [LuckPerms] Closing storage...
+[18:53:30] [Server thread/INFO]: [LuckPerms] Goodbye!
+[18:53:31] [Server thread/INFO]: Loaded 1290 recipes
+[18:53:31] [Server thread/INFO]: Loaded 1399 advancements
+[18:53:31] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
+[18:53:31] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PeakGambling-1.0.0.jar'...
+[18:53:32] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PeakGambling-1.0.0.jar' in 689ms.
+[18:53:32] [Server thread/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[18:53:32] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (4):
+ - Essentials (2.20.1), LuckPerms (5.4.146), PeakGambling (1.0.0), Vault (1.7.3-b131)
+[18:53:32] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
+[18:53:32] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[18:53:32] [Server thread/INFO]: [PeakGambling] Loading server plugin PeakGambling v1.0.0
+[18:53:32] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[18:53:32] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[18:53:32] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
+[18:53:32] [Server thread/INFO]:         __    
+[18:53:32] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
+[18:53:32] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[18:53:32] [Server thread/INFO]: 
+[18:53:32] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[18:53:32] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[18:53:33] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[18:53:33] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[18:53:33] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 771ms)
+[18:53:33] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[18:53:33] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[18:53:33] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[18:53:33] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[18:53:33] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[18:53:33] [Server thread/INFO]: [PeakGambling] Enabling PeakGambling v1.0.0
+[18:53:33] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[18:53:33] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[18:53:33] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[18:53:33] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[18:53:34] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
+[18:53:34] [Server thread/INFO]: [Essentials] Using locale en_GB
+[18:53:34] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[18:53:34] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[18:53:34] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[18:53:34] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[18:53:34] [Server thread/INFO]: CONSOLE: Reload complete.
+[18:53:34] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 3506ms or 70 ticks behind
+[18:53:34] [Server thread/INFO]: Timings Reset
+[18:53:34] [Craft Scheduler Thread - 13 - Essentials/INFO]: [Essentials] Fetching version information...
+[18:53:34] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[18:53:34] [Craft Scheduler Thread - 15 - Vault/INFO]: [Vault] Checking for Updates ... 
+[18:53:34] [Craft Scheduler Thread - 15 - Vault/INFO]: [Vault] No new version available
+[18:53:34] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[18:53:43] [Server thread/INFO]: AlbertTheYoung issued server command: /eco give * 1000
+[18:53:51] [Server thread/INFO]: AlbertTheYoung issued server command: /bal
+[18:53:54] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[18:59:13] [Server thread/INFO]: AlbertTheYoung lost connection: Disconnected
+[18:59:13] [Server thread/INFO]: AlbertTheYoung left the game
+[18:59:53] [User Authenticator #1/INFO]: UUID of player AlbertTheYoung is 63edd68d-b87c-4eae-842e-da4ab8fb87ac
+[18:59:54] [Server thread/INFO]: AlbertTheYoung joined the game
+[18:59:54] [Server thread/INFO]: AlbertTheYoung[/192.168.87.183:58962] logged in with entity id 1675 at ([world]-3.4309439908902903, -57.809388000540814, 1.8344810335040178)
+[19:00:04] [Server thread/INFO]: AlbertTheYoung lost connection: Disconnected
+[19:00:04] [Server thread/INFO]: AlbertTheYoung left the game
+[19:00:32] [User Authenticator #1/INFO]: UUID of player AlbertTheYoung is 63edd68d-b87c-4eae-842e-da4ab8fb87ac
+[19:00:32] [Server thread/INFO]: AlbertTheYoung joined the game
+[19:00:32] [Server thread/INFO]: AlbertTheYoung[/192.168.87.183:51104] logged in with entity id 1682 at ([world]-10.392997068440142, -57.809388000540814, 5.284925553594288)
+[19:14:54] [Server thread/INFO]: AlbertTheYoung issued server command: /baltop
+[19:36:24] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[19:36:24] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[19:36:24] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[19:36:24] [Server thread/INFO]: Using 4 threads for Netty based IO
+[19:36:24] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
+[19:36:24] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
+[19:36:24] [Server thread/ERROR]: [Essentials] There's a good chance you're reloading your server right now. If that's the case, why do you hate yourself? Expect no support from the EssentialsX team when using /reload.
+[19:36:24] [Server thread/INFO]: [PeakGambling] Disabling PeakGambling v1.0.0
+[19:36:24] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[19:36:24] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
+[19:36:24] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[19:36:24] [Server thread/INFO]: [LuckPerms] Closing storage...
+[19:36:24] [Server thread/INFO]: [LuckPerms] Goodbye!
+[19:36:24] [Server thread/INFO]: Loaded 1290 recipes
+[19:36:25] [Server thread/INFO]: Loaded 1399 advancements
+[19:36:25] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
+[19:36:25] [Paper Async Command Builder Thread Pool - 5/ERROR]: Caught previously unhandled exception :
+[19:36:25] [Paper Async Command Builder Thread Pool - 5/ERROR]: Paper Async Command Builder Thread Pool - 5
+java.util.ConcurrentModificationException: null
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:1023) ~[?:?]
+	at java.base/java.util.LinkedHashMap$LinkedValueIterator.next(LinkedHashMap.java:1052) ~[?:?]
+	at net.minecraft.commands.Commands.fillUsableCommands(Commands.java:531) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.sendAsync(Commands.java:496) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.lambda$sendCommands$6(Commands.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[19:36:25] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PeakGambling-1.0.0.jar'...
+[19:36:26] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PeakGambling-1.0.0.jar' in 1125ms.
+[19:36:26] [Server thread/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[19:36:26] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (4):
+ - Essentials (2.20.1), LuckPerms (5.4.146), PeakGambling (1.0.0), Vault (1.7.3-b131)
+[19:36:26] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
+[19:36:27] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[19:36:27] [Server thread/INFO]: [PeakGambling] Loading server plugin PeakGambling v1.0.0
+[19:36:27] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[19:36:27] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[19:36:27] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
+[19:36:28] [Server thread/INFO]:         __    
+[19:36:28] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
+[19:36:28] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[19:36:28] [Server thread/INFO]: 
+[19:36:28] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[19:36:28] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[19:36:29] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[19:36:30] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[19:36:30] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 3446ms)
+[19:36:30] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[19:36:30] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[19:36:30] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[19:36:31] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[19:36:31] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[19:36:31] [Server thread/INFO]: [PeakGambling] Enabling PeakGambling v1.0.0
+[19:36:31] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[19:36:31] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[19:36:32] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[19:36:32] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[19:36:32] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
+[19:36:32] [Server thread/INFO]: [Essentials] Using locale en_GB
+[19:36:32] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[19:36:32] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[19:36:32] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[19:36:32] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[19:36:32] [Server thread/INFO]: CONSOLE: Reload complete.
+[19:36:32] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 8578ms or 171 ticks behind
+[19:36:32] [Server thread/INFO]: Timings Reset
+[19:36:32] [Craft Scheduler Thread - 28 - Essentials/INFO]: [Essentials] Fetching version information...
+[19:36:32] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[19:36:32] [Craft Scheduler Thread - 30 - Vault/INFO]: [Vault] Checking for Updates ... 
+[19:36:33] [Craft Scheduler Thread - 30 - Vault/INFO]: [Vault] No new version available
+[19:36:57] [Server thread/INFO]: AlbertTheYoung issued server command: /baltop
+[19:37:02] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[19:48:54] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[19:48:54] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[19:48:54] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[19:48:54] [Server thread/INFO]: Using 4 threads for Netty based IO
+[19:48:54] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
+[19:48:54] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
+[19:48:54] [Server thread/ERROR]: [Essentials] There's a good chance you're reloading your server right now. If that's the case, why do you hate yourself? Expect no support from the EssentialsX team when using /reload.
+[19:48:54] [Server thread/INFO]: [PeakGambling] Disabling PeakGambling v1.0.0
+[19:48:54] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[19:48:54] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
+[19:48:54] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[19:48:54] [Server thread/INFO]: [LuckPerms] Closing storage...
+[19:48:54] [Server thread/INFO]: [LuckPerms] Goodbye!
+[19:48:55] [Server thread/INFO]: Loaded 1290 recipes
+[19:48:55] [Server thread/INFO]: Loaded 1399 advancements
+[19:48:55] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
+[19:48:55] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PeakGambling-1.0.0.jar'...
+[19:48:55] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PeakGambling-1.0.0.jar' in 550ms.
+[19:48:55] [Server thread/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[19:48:55] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (4):
+ - Essentials (2.20.1), LuckPerms (5.4.146), PeakGambling (1.0.0), Vault (1.7.3-b131)
+[19:48:55] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
+[19:48:56] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[19:48:56] [Server thread/INFO]: [PeakGambling] Loading server plugin PeakGambling v1.0.0
+[19:48:56] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[19:48:56] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[19:48:56] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
+[19:48:56] [Server thread/INFO]:         __    
+[19:48:56] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
+[19:48:56] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[19:48:56] [Server thread/INFO]: 
+[19:48:56] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[19:48:56] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[19:48:56] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[19:48:56] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[19:48:56] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 634ms)
+[19:48:56] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[19:48:56] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[19:48:56] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[19:48:56] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[19:48:56] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[19:48:56] [Server thread/INFO]: [PeakGambling] Enabling PeakGambling v1.0.0
+[19:48:56] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[19:48:56] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[19:48:57] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[19:48:57] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[19:48:57] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
+[19:48:57] [Server thread/INFO]: [Essentials] Using locale en_GB
+[19:48:57] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[19:48:57] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[19:48:57] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[19:48:57] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[19:48:57] [Server thread/INFO]: CONSOLE: Reload complete.
+[19:48:57] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2997ms or 59 ticks behind
+[19:48:57] [Server thread/INFO]: Timings Reset
+[19:48:57] [Craft Scheduler Thread - 32 - Essentials/INFO]: [Essentials] Fetching version information...
+[19:48:57] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[19:48:57] [Craft Scheduler Thread - 31 - Vault/INFO]: [Vault] Checking for Updates ... 
+[19:48:57] [Craft Scheduler Thread - 31 - Vault/INFO]: [Vault] No new version available
+[19:48:59] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[19:50:38] [Server thread/INFO]: AlbertTheYoung issued server command: /difficulty peaceful
+[19:50:38] [Server thread/INFO]: [AlbertTheYoung: The difficulty has been set to Peaceful]
+[19:50:44] [Server thread/INFO]: AlbertTheYoung issued server command: /time set day
+[19:51:24] [Server thread/INFO]: AlbertTheYoung issued server command: /time set morning
+[19:53:19] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[19:53:19] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[19:53:20] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[19:53:20] [Server thread/INFO]: Using 4 threads for Netty based IO
+[19:53:20] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
+[19:53:20] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
+[19:53:20] [Server thread/ERROR]: [Essentials] There's a good chance you're reloading your server right now. If that's the case, why do you hate yourself? Expect no support from the EssentialsX team when using /reload.
+[19:53:20] [Server thread/INFO]: [PeakGambling] Disabling PeakGambling v1.0.0
+[19:53:20] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[19:53:20] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
+[19:53:20] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[19:53:20] [Server thread/INFO]: [LuckPerms] Closing storage...
+[19:53:20] [Server thread/INFO]: [LuckPerms] Goodbye!
+[19:53:20] [Server thread/INFO]: Loaded 1290 recipes
+[19:53:20] [Server thread/INFO]: Loaded 1399 advancements
+[19:53:20] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
+[19:53:20] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PeakGambling-1.0.0.jar'...
+[19:53:21] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PeakGambling-1.0.0.jar' in 473ms.
+[19:53:21] [Server thread/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[19:53:21] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (4):
+ - Essentials (2.20.1), LuckPerms (5.4.146), PeakGambling (1.0.0), Vault (1.7.3-b131)
+[19:53:21] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
+[19:53:21] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[19:53:21] [Server thread/INFO]: [PeakGambling] Loading server plugin PeakGambling v1.0.0
+[19:53:21] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[19:53:21] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[19:53:21] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
+[19:53:21] [Server thread/INFO]:         __    
+[19:53:21] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
+[19:53:21] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[19:53:21] [Server thread/INFO]: 
+[19:53:21] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[19:53:21] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[19:53:21] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[19:53:21] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[19:53:21] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 548ms)
+[19:53:21] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[19:53:21] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[19:53:21] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[19:53:21] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[19:53:21] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[19:53:21] [Server thread/INFO]: [PeakGambling] Enabling PeakGambling v1.0.0
+[19:53:21] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[19:53:21] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[19:53:22] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[19:53:22] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[19:53:22] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
+[19:53:22] [Server thread/INFO]: [Essentials] Using locale en_GB
+[19:53:22] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[19:53:22] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[19:53:22] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[19:53:22] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[19:53:22] [Server thread/INFO]: CONSOLE: Reload complete.
+[19:53:22] [Server thread/INFO]: Timings Reset
+[19:53:22] [Craft Scheduler Thread - 36 - Essentials/INFO]: [Essentials] Fetching version information...
+[19:53:22] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[19:53:22] [Craft Scheduler Thread - 39 - Vault/INFO]: [Vault] Checking for Updates ... 
+[19:53:22] [Craft Scheduler Thread - 39 - Vault/INFO]: [Vault] No new version available
+[19:53:23] [Server thread/INFO]: AlbertTheYoung issued server command: /time set morning
+[19:53:26] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[19:53:38] [Server thread/INFO]: AlbertTheYoung issued server command: /eco give * 1000
+[19:54:01] [Server thread/INFO]: AlbertTheYoung lost connection: Disconnected
+[19:54:01] [Server thread/INFO]: AlbertTheYoung left the game
+[19:55:12] [User Authenticator #2/INFO]: UUID of player AlbertTheYoung is 63edd68d-b87c-4eae-842e-da4ab8fb87ac
+[19:55:12] [Server thread/INFO]: AlbertTheYoung joined the game
+[19:55:12] [Server thread/INFO]: AlbertTheYoung[/192.168.87.183:55152] logged in with entity id 3621 at ([world]-5.15082715518022, -57.809388000540814, 3.5120410863729847)
+[19:55:22] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[19:55:30] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[19:55:30] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[19:55:30] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[19:55:30] [Server thread/INFO]: Using 4 threads for Netty based IO
+[19:55:30] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
+[19:55:30] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
+[19:55:30] [Server thread/ERROR]: [Essentials] There's a good chance you're reloading your server right now. If that's the case, why do you hate yourself? Expect no support from the EssentialsX team when using /reload.
+[19:55:30] [Server thread/INFO]: [PeakGambling] Disabling PeakGambling v1.0.0
+[19:55:30] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[19:55:30] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
+[19:55:30] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[19:55:30] [Server thread/INFO]: [LuckPerms] Closing storage...
+[19:55:30] [Server thread/INFO]: [LuckPerms] Goodbye!
+[19:55:30] [Server thread/INFO]: Loaded 1290 recipes
+[19:55:30] [Server thread/INFO]: Loaded 1399 advancements
+[19:55:30] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
+[19:55:30] [Paper Async Command Builder Thread Pool - 9/ERROR]: Caught previously unhandled exception :
+[19:55:30] [Paper Async Command Builder Thread Pool - 9/ERROR]: Paper Async Command Builder Thread Pool - 9
+java.util.ConcurrentModificationException: null
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:1023) ~[?:?]
+	at java.base/java.util.LinkedHashMap$LinkedValueIterator.next(LinkedHashMap.java:1052) ~[?:?]
+	at net.minecraft.commands.Commands.fillUsableCommands(Commands.java:531) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.sendAsync(Commands.java:496) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.lambda$sendCommands$6(Commands.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[19:55:30] [Server thread/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[19:55:30] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (4):
+ - Essentials (2.20.1), LuckPerms (5.4.146), PeakGambling (1.0.0), Vault (1.7.3-b131)
+[19:55:30] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
+[19:55:30] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[19:55:30] [Server thread/INFO]: [PeakGambling] Loading server plugin PeakGambling v1.0.0
+[19:55:30] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[19:55:30] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[19:55:30] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
+[19:55:30] [Server thread/INFO]:         __    
+[19:55:30] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
+[19:55:30] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[19:55:30] [Server thread/INFO]: 
+[19:55:30] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[19:55:31] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[19:55:31] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[19:55:31] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[19:55:31] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 571ms)
+[19:55:31] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[19:55:31] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[19:55:31] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[19:55:31] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[19:55:31] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[19:55:31] [Server thread/INFO]: [PeakGambling] Enabling PeakGambling v1.0.0
+[19:55:31] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[19:55:31] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[19:55:31] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[19:55:31] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[19:55:31] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
+[19:55:31] [Server thread/INFO]: [Essentials] Using locale en_GB
+[19:55:31] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[19:55:31] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[19:55:31] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[19:55:31] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[19:55:31] [Server thread/INFO]: CONSOLE: Reload complete.
+[19:55:31] [Server thread/INFO]: Timings Reset
+[19:55:31] [Craft Scheduler Thread - 43 - Essentials/INFO]: [Essentials] Fetching version information...
+[19:55:31] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[19:55:31] [Craft Scheduler Thread - 45 - Vault/INFO]: [Vault] Checking for Updates ... 
+[19:55:32] [Craft Scheduler Thread - 45 - Vault/INFO]: [Vault] No new version available
+[19:55:40] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[19:56:09] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[19:56:09] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[19:56:09] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[19:56:09] [Server thread/INFO]: Using 4 threads for Netty based IO
+[19:56:09] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
+[19:56:09] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
+[19:56:09] [Server thread/ERROR]: [Essentials] There's a good chance you're reloading your server right now. If that's the case, why do you hate yourself? Expect no support from the EssentialsX team when using /reload.
+[19:56:09] [Server thread/INFO]: [PeakGambling] Disabling PeakGambling v1.0.0
+[19:56:09] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[19:56:09] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
+[19:56:09] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[19:56:09] [Server thread/INFO]: [LuckPerms] Closing storage...
+[19:56:09] [Server thread/INFO]: [LuckPerms] Goodbye!
+[19:56:09] [Server thread/INFO]: Loaded 1290 recipes
+[19:56:09] [Server thread/INFO]: Loaded 1399 advancements
+[19:56:09] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
+[19:56:09] [Paper Async Command Builder Thread Pool - 10/ERROR]: Caught previously unhandled exception :
+[19:56:09] [Paper Async Command Builder Thread Pool - 10/ERROR]: Paper Async Command Builder Thread Pool - 10
+java.util.ConcurrentModificationException: null
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:1023) ~[?:?]
+	at java.base/java.util.LinkedHashMap$LinkedValueIterator.next(LinkedHashMap.java:1052) ~[?:?]
+	at net.minecraft.commands.Commands.fillUsableCommands(Commands.java:531) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.sendAsync(Commands.java:496) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.lambda$sendCommands$6(Commands.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[19:56:09] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PeakGambling-1.0.0.jar'...
+[19:56:10] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PeakGambling-1.0.0.jar' in 436ms.
+[19:56:10] [Server thread/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[19:56:10] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (4):
+ - Essentials (2.20.1), LuckPerms (5.4.146), PeakGambling (1.0.0), Vault (1.7.3-b131)
+[19:56:10] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
+[19:56:10] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[19:56:10] [Server thread/INFO]: [PeakGambling] Loading server plugin PeakGambling v1.0.0
+[19:56:10] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[19:56:10] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[19:56:10] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
+[19:56:10] [Server thread/INFO]:         __    
+[19:56:10] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
+[19:56:10] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[19:56:10] [Server thread/INFO]: 
+[19:56:10] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[19:56:10] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[19:56:10] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[19:56:10] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[19:56:10] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 591ms)
+[19:56:10] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[19:56:10] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[19:56:10] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[19:56:10] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[19:56:10] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[19:56:10] [Server thread/INFO]: [PeakGambling] Enabling PeakGambling v1.0.0
+[19:56:10] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[19:56:10] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[19:56:11] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[19:56:11] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[19:56:11] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
+[19:56:11] [Server thread/INFO]: [Essentials] Using locale en_GB
+[19:56:11] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[19:56:11] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[19:56:11] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[19:56:11] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[19:56:11] [Server thread/INFO]: CONSOLE: Reload complete.
+[19:56:11] [Server thread/INFO]: Timings Reset
+[19:56:11] [Craft Scheduler Thread - 49 - Essentials/INFO]: [Essentials] Fetching version information...
+[19:56:11] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[19:56:11] [Craft Scheduler Thread - 51 - Vault/INFO]: [Vault] Checking for Updates ... 
+[19:56:11] [Craft Scheduler Thread - 51 - Vault/INFO]: [Vault] No new version available
+[19:56:12] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[19:56:22] [Server thread/INFO]: AlbertTheYoung issued server command: /eco give AlbertTheYoung 1000000
+[19:56:24] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[19:58:08] [Server thread/INFO]: AlbertTheYoung lost connection: Disconnected
+[19:58:08] [Server thread/INFO]: AlbertTheYoung left the game
+[19:58:39] [User Authenticator #3/INFO]: UUID of player AlbertTheYoung is 63edd68d-b87c-4eae-842e-da4ab8fb87ac
+[19:58:39] [Server thread/INFO]: AlbertTheYoung joined the game
+[19:58:39] [Server thread/INFO]: AlbertTheYoung[/192.168.87.183:46660] logged in with entity id 3625 at ([world]-5.15082715518022, -57.809388000540814, 3.5120410863729847)
+[20:46:33] [User Authenticator #4/INFO]: UUID of player Mathias_pryss is e35e86f6-4fba-4bc0-8a17-c28f52799d01
+[20:46:33] [Server thread/INFO]: Mathias_pryss joined the game
+[20:46:33] [Server thread/INFO]: Mathias_pryss[/212.10.127.154:53732] logged in with entity id 3629 at ([world]6.5, -60.0, 7.5)
+[20:46:44] [Server thread/INFO]: AlbertTheYoung issued server command: /op Mathias_pryss
+[20:46:44] [Server thread/INFO]: [AlbertTheYoung: Made Mathias_pryss a server operator]
+[20:46:45] [User Authenticator #4/INFO]: UUID of player Champly is dea0e8b5-63bb-48f6-9200-e77239ae938b
+[20:46:45] [Server thread/INFO]: Champly joined the game
+[20:46:45] [Server thread/INFO]: Champly[/80.209.75.83:35386] logged in with entity id 3630 at ([world]5.138568144021788, -20.01821264437403, -10.998190309663316)
+[20:46:46] [Server thread/INFO]: Mathias_pryss issued server command: /gamemode creative
+[20:46:55] [Server thread/INFO]: Champly issued server command: /gamemode creative
+[20:48:02] [Server thread/INFO]: Champly issued server command: /r Mathias_pryss du skal lige se det svær jeg lige har lavet på serveren
+[20:48:11] [Server thread/INFO]: Champly issued server command: /msg Mathias_pryss du skal lige se det svær jeg lige har lavet på serveren
+[20:48:26] [Server thread/INFO]: Champly issued server command: /r det er det svær jeg lige har lavet
+[20:48:28] [Server thread/INFO]: Mathias_pryss issued server command: /msg Champly joooo nice
+[20:48:39] [Server thread/INFO]: Champly issued server command: /r ingen kan dræbemig
+[20:48:57] [Server thread/INFO]: Champly issued server command: /gamemode survival
+[20:49:17] [Async Chat Thread - #6/INFO]: <Champly> check baltop
+[20:49:28] [Server thread/INFO]: Mathias_pryss issued server command: /gamemode survival
+[20:49:31] [Server thread/INFO]: Mathias_pryss has made the advancement [Who Needs Rockets?]
+[20:49:47] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:49:53] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:50:04] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:50:08] [Server thread/INFO]: Champly issued server command: /gamemode creative
+[20:50:09] [Server thread/INFO]: Champly issued server command: /gamemode survival
+[20:50:09] [Server thread/INFO]: Champly issued server command: /gamemode creative
+[20:50:09] [Server thread/INFO]: Champly issued server command: /gamemode survival
+[20:50:20] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:50:36] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:50:49] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:50:55] [Server thread/INFO]: Champly issued server command: /gamemode creative
+[20:50:55] [Server thread/INFO]: Mathias_pryss issued server command: /gamemode creative
+[20:51:11] [Server thread/INFO]: Champly has made the advancement [Enchanter]
+[20:51:41] [Server thread/INFO]: Champly issued server command: /gamemode survival
+[20:51:45] [Server thread/INFO]: Mathias_pryss issued server command: /gamemode survival
+[20:52:03] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:52:34] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:52:44] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:52:47] [Server thread/INFO]: Champly issued server command: /gamemode creative
+[20:52:48] [Server thread/INFO]: Mathias_pryss issued server command: /gamemode creative
+[20:52:55] [Server thread/INFO]: Champly issued server command: /gamemode survival
+[20:52:55] [Server thread/INFO]: Mathias_pryss issued server command: /gamemode survival
+[20:52:59] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:53:07] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:53:15] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:53:33] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:53:51] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:54:05] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:54:26] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:54:46] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:55:09] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:55:27] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:55:36] [Server thread/INFO]: Champly issued server command: /gamemode creative
+[20:56:14] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:56:19] [Server thread/INFO]: Champly issued server command: /gamemode survival
+[20:56:24] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:56:30] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:57:03] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:57:31] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:57:48] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:57:56] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:58:13] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:58:18] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:58:27] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:58:45] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:58:54] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:59:03] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:59:14] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[20:59:29] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[20:59:53] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:00:01] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:00:10] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:00:27] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:00:48] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:00:54] [Server thread/INFO]: Mathias_pryss issued server command: /gamemode creative
+[21:00:55] [Server thread/INFO]: Mathias_pryss issued server command: /gamemode survival
+[21:01:12] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:01:27] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:01:42] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:01:50] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:01:58] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:02:12] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:02:19] [User Authenticator #5/INFO]: UUID of player V1addyDaddy is ce16e448-158d-4eab-8794-90aee1e7ceb5
+[21:02:19] [Server thread/INFO]: V1addyDaddy joined the game
+[21:02:19] [Server thread/INFO]: V1addyDaddy[/80.208.70.106:44176] logged in with entity id 4129 at ([world]1.5, -60.0, -7.5)
+[21:02:25] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:02:31] [Server thread/INFO]: Champly issued server command: /op V1addyDaddy
+[21:02:31] [Server thread/INFO]: [Champly: Made V1addyDaddy a server operator]
+[21:02:37] [Server thread/INFO]: Champly issued server command: /gamemode creative
+[21:02:38] [Server thread/INFO]: Mathias_pryss issued server command: /gamemode creative
+[21:02:42] [Server thread/INFO]: Champly issued server command: /gamemode survival
+[21:02:46] [Server thread/INFO]: Champly issued server command: /gamemode creative
+[21:02:49] [Server thread/INFO]: Champly issued server command: /gamemode survival
+[21:02:58] [Server thread/INFO]: Champly issued server command: /gamemode creative
+[21:03:06] [Server thread/INFO]: Champly issued server command: /gamemode survival
+[21:03:09] [Server thread/INFO]: V1addyDaddy was slain by Champly
+[21:03:20] [Server thread/INFO]: V1addyDaddy was slain by Champly
+[21:03:21] [Server thread/INFO]: Mathias_pryss issued server command: /gamemode survival
+[21:03:33] [Server thread/INFO]: V1addyDaddy was slain by Champly
+[21:03:37] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:03:42] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:03:50] [Server thread/INFO]: V1addyDaddy has made the advancement [Who Needs Rockets?]
+[21:04:05] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:04:08] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:04:20] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:04:29] [Server thread/INFO]: V1addyDaddy was slain by Champly
+[21:04:32] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:04:43] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:04:46] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:04:46] [Server thread/INFO]: Mathias_pryss has completed the challenge [Over-Overkill]
+[21:04:58] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:05:01] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:05:10] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:05:14] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:05:19] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:05:25] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:05:38] [Server thread/INFO]: Champly issued server command: /effect give Champly minecraft:jump_boost 3 20
+[21:05:38] [Server thread/INFO]: [Champly: Applied effect Jump Boost to Champly]
+[21:05:42] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[21:05:42] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[21:05:42] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[21:05:42] [Server thread/INFO]: Using 4 threads for Netty based IO
+[21:05:42] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
+[21:05:42] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
+[21:05:42] [Server thread/ERROR]: [Essentials] There's a good chance you're reloading your server right now. If that's the case, why do you hate yourself? Expect no support from the EssentialsX team when using /reload.
+[21:05:42] [Server thread/INFO]: [PeakGambling] Disabling PeakGambling v1.0.0
+[21:05:42] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[21:05:42] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
+[21:05:42] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[21:05:42] [Server thread/INFO]: [LuckPerms] Closing storage...
+[21:05:42] [Server thread/INFO]: [LuckPerms] Goodbye!
+[21:05:43] [Server thread/INFO]: Loaded 1290 recipes
+[21:05:43] [Server thread/INFO]: Loaded 1399 advancements
+[21:05:43] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
+[21:05:43] [Paper Async Command Builder Thread Pool - 14/ERROR]: Caught previously unhandled exception :
+[21:05:43] [Paper Async Command Builder Thread Pool - 14/ERROR]: Paper Async Command Builder Thread Pool - 14
+java.util.ConcurrentModificationException: null
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:1023) ~[?:?]
+	at java.base/java.util.LinkedHashMap$LinkedValueIterator.next(LinkedHashMap.java:1052) ~[?:?]
+	at net.minecraft.commands.Commands.fillUsableCommands(Commands.java:531) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.sendAsync(Commands.java:496) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.lambda$sendCommands$6(Commands.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[21:05:43] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PeakGambling-1.0.0.jar'...
+[21:05:44] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PeakGambling-1.0.0.jar' in 826ms.
+[21:05:44] [Server thread/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[21:05:44] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (4):
+ - Essentials (2.20.1), LuckPerms (5.4.146), PeakGambling (1.0.0), Vault (1.7.3-b131)
+[21:05:44] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
+[21:05:44] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[21:05:44] [Server thread/INFO]: [PeakGambling] Loading server plugin PeakGambling v1.0.0
+[21:05:44] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[21:05:44] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[21:05:44] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
+[21:05:46] [Server thread/INFO]:         __    
+[21:05:46] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
+[21:05:46] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[21:05:46] [Server thread/INFO]: 
+[21:05:46] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[21:05:46] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[21:05:47] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[21:05:48] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[21:05:48] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 3560ms)
+[21:05:48] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[21:05:48] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[21:05:48] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[21:05:48] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[21:05:48] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[21:05:48] [Server thread/INFO]: [PeakGambling] Enabling PeakGambling v1.0.0
+[21:05:49] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[21:05:49] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[21:05:49] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[21:05:49] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[21:05:49] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
+[21:05:49] [Server thread/INFO]: [Essentials] Using locale en_GB
+[21:05:49] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[21:05:50] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[21:05:50] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[21:05:50] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[21:05:50] [Server thread/INFO]: CONSOLE: Reload complete.
+[21:05:50] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 7698ms or 153 ticks behind
+[21:05:50] [Server thread/INFO]: Timings Reset
+[21:05:50] [Craft Scheduler Thread - 65 - Essentials/INFO]: [Essentials] Fetching version information...
+[21:05:50] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[21:05:50] [Server thread/INFO]: Champly issued server command: /effect give Champly minecraft:jump_boost 3 20
+[21:05:50] [Server thread/INFO]: [Champly: Applied effect Jump Boost to Champly]
+[21:05:50] [Craft Scheduler Thread - 67 - Vault/INFO]: [Vault] Checking for Updates ... 
+[21:05:50] [Server thread/WARN]: V1addyDaddy moved too quickly! -5.7663514263873985,-0.796735600668697,8.235006845337935
+[21:05:50] [Craft Scheduler Thread - 67 - Vault/INFO]: [Vault] No new version available
+[21:05:53] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[21:05:53] [Server thread/INFO]: Champly issued server command: /effect give Champly minecraft:jump_boost 3 20
+[21:05:53] [Server thread/INFO]: [Champly: Applied effect Jump Boost to Champly]
+[21:05:59] [Server thread/INFO]: Champly issued server command: /effect give Champly minecraft:jump_boost 3 20
+[21:05:59] [Server thread/INFO]: [Champly: Applied effect Jump Boost to Champly]
+[21:06:03] [Server thread/INFO]: Champly issued server command: /effect give Champly minecraft:jump_boost 3 20
+[21:06:03] [Server thread/INFO]: [Champly: Applied effect Jump Boost to Champly]
+[21:06:07] [Server thread/INFO]: Champly issued server command: /effect give Champly minecraft:jump_boost 3 20
+[21:06:07] [Server thread/INFO]: [Champly: Applied effect Jump Boost to Champly]
+[21:06:11] [Server thread/INFO]: Champly issued server command: /effect give Champly minecraft:jump_boost 3 20
+[21:06:11] [Server thread/INFO]: [Champly: Applied effect Jump Boost to Champly]
+[21:06:14] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:06:19] [Server thread/INFO]: Champly issued server command: /effect give Champly minecraft:jump_boost 3 30
+[21:06:19] [Server thread/INFO]: [Champly: Applied effect Jump Boost to Champly]
+[21:06:23] [Server thread/INFO]: V1addyDaddy was slain by Champly
+[21:06:28] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:06:39] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:06:49] [Server thread/INFO]: Champly was slain by V1addyDaddy
+[21:06:59] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:07:01] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[21:07:01] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[21:07:01] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[21:07:01] [Server thread/INFO]: Using 4 threads for Netty based IO
+[21:07:01] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
+[21:07:01] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
+[21:07:01] [Server thread/ERROR]: [Essentials] There's a good chance you're reloading your server right now. If that's the case, why do you hate yourself? Expect no support from the EssentialsX team when using /reload.
+[21:07:01] [Server thread/INFO]: [PeakGambling] Disabling PeakGambling v1.0.0
+[21:07:01] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[21:07:01] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
+[21:07:01] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[21:07:01] [Server thread/INFO]: [LuckPerms] Closing storage...
+[21:07:01] [Server thread/INFO]: [LuckPerms] Goodbye!
+[21:07:01] [Server thread/INFO]: Loaded 1290 recipes
+[21:07:01] [Server thread/INFO]: Loaded 1399 advancements
+[21:07:02] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
+[21:07:02] [Paper Async Command Builder Thread Pool - 15/ERROR]: Caught previously unhandled exception :
+[21:07:02] [Paper Async Command Builder Thread Pool - 15/ERROR]: Paper Async Command Builder Thread Pool - 15
+java.util.ConcurrentModificationException: null
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:1023) ~[?:?]
+	at java.base/java.util.LinkedHashMap$LinkedValueIterator.next(LinkedHashMap.java:1052) ~[?:?]
+	at net.minecraft.commands.Commands.fillUsableCommands(Commands.java:531) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.sendAsync(Commands.java:496) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.lambda$sendCommands$6(Commands.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[21:07:02] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PeakGambling-1.0.0.jar'...
+[21:07:02] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PeakGambling-1.0.0.jar' in 568ms.
+[21:07:02] [Server thread/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[21:07:02] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (4):
+ - Essentials (2.20.1), LuckPerms (5.4.146), PeakGambling (1.0.0), Vault (1.7.3-b131)
+[21:07:02] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
+[21:07:02] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[21:07:02] [Server thread/INFO]: [PeakGambling] Loading server plugin PeakGambling v1.0.0
+[21:07:02] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[21:07:02] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[21:07:02] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
+[21:07:03] [Server thread/INFO]:         __    
+[21:07:03] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
+[21:07:03] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[21:07:03] [Server thread/INFO]: 
+[21:07:03] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[21:07:03] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[21:07:03] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[21:07:03] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[21:07:03] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 589ms)
+[21:07:03] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[21:07:03] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[21:07:03] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[21:07:03] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[21:07:03] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[21:07:03] [Server thread/INFO]: [PeakGambling] Enabling PeakGambling v1.0.0
+[21:07:03] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[21:07:03] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[21:07:03] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[21:07:03] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[21:07:04] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
+[21:07:04] [Server thread/INFO]: [Essentials] Using locale en_GB
+[21:07:04] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[21:07:04] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[21:07:04] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[21:07:04] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[21:07:04] [Server thread/INFO]: CONSOLE: Reload complete.
+[21:07:04] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2754ms or 55 ticks behind
+[21:07:04] [Server thread/INFO]: Timings Reset
+[21:07:04] [Craft Scheduler Thread - 70 - Essentials/INFO]: [Essentials] Fetching version information...
+[21:07:04] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[21:07:04] [Craft Scheduler Thread - 72 - Vault/INFO]: [Vault] Checking for Updates ... 
+[21:07:04] [Craft Scheduler Thread - 72 - Vault/INFO]: [Vault] No new version available
+[21:07:06] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[21:07:11] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:07:15] [Server thread/INFO]: AlbertTheYoung issued server command: /eco give AlbertTheYoung 100
+[21:07:16] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:07:17] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[21:07:18] [Server thread/INFO]: V1addyDaddy was slain by Champly
+[21:07:21] [Server thread/ERROR]: [com.albertdayoung.allgamblingandcasino.gui.click.processor.ClickProcessor] An exception occurred while processing click for 'AlbertTheYoung' on slot '4'.
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because "this.causeOptions" is null
+	at PeakGambling-1.0.0.jar/com.albertdayoung.allgamblingandcasino.utils.dataclasses.BetOnPlayerDeathOptions.<init>(BetOnPlayerDeathOptions.java:13) ~[PeakGambling-1.0.0.jar:?]
+	at PeakGambling-1.0.0.jar/com.albertdayoung.allgamblingandcasino.gui.PlaceBetOnDeathTypeMenu.open(PlaceBetOnDeathTypeMenu.java:25) ~[PeakGambling-1.0.0.jar:?]
+	at PeakGambling-1.0.0.jar/com.albertdayoung.allgamblingandcasino.gui.components.buttons.PlaceBetButton.lambda$invoke$0(PlaceBetButton.java:28) ~[PeakGambling-1.0.0.jar:?]
+	at PeakGambling-1.0.0.jar/com.albertdayoung.allgamblingandcasino.gui.click.handler.SimpleClickHandler.handle(SimpleClickHandler.java:56) ~[PeakGambling-1.0.0.jar:?]
+	at PeakGambling-1.0.0.jar/com.albertdayoung.allgamblingandcasino.gui.click.processor.ClickProcessor.processClick(ClickProcessor.java:120) ~[PeakGambling-1.0.0.jar:?]
+	at PeakGambling-1.0.0.jar/com.albertdayoung.allgamblingandcasino.gui.AbstractGuiView.processClick(AbstractGuiView.java:159) ~[PeakGambling-1.0.0.jar:?]
+	at PeakGambling-1.0.0.jar/com.albertdayoung.allgamblingandcasino.gui.paper.PaperGuiListener.onGuiClick(PaperGuiListener.java:52) ~[PeakGambling-1.0.0.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor717.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.handleContainerClick(ServerGamePacketListenerImpl.java:3224) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.network.protocol.game.ServerboundContainerClickPacket.handle(ServerboundContainerClickPacket.java:69) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.network.protocol.game.ServerboundContainerClickPacket.handle(ServerboundContainerClickPacket.java:33) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.network.protocol.PacketUtils.lambda$ensureRunningOnSameThread$0(PacketUtils.java:56) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.TickTask.run(TickTask.java:18) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:151) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:24) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:1535) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:201) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:125) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.pollTaskInternal(MinecraftServer.java:1512) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.pollTask(MinecraftServer.java:1505) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:135) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.managedBlock(MinecraftServer.java:1464) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.waitUntilNextTick(MinecraftServer.java:1471) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1316) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[21:07:23] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:07:28] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:07:35] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:07:38] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:07:52] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:07:54] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:08:09] [Server thread/INFO]: Champly issued server command: /effect give V1addyDaddy minecraft:levitation 2 255
+[21:08:09] [Server thread/INFO]: [Champly: Applied effect Levitation to V1addyDaddy]
+[21:08:09] [Server thread/INFO]: V1addyDaddy has completed the challenge [Great View From Up Here]
+[21:08:10] [Server thread/WARN]: V1addyDaddy moved too quickly! -0.1788585179567077,23.170031035345545,-0.04231551413132273
+[21:08:14] [Server thread/INFO]: Champly issued server command: /gamemode creative
+[21:08:25] [Server thread/INFO]: V1addyDaddy has made the advancement [Caves & Cliffs]
+[21:08:27] [Server thread/INFO]: Champly issued server command: /gamemode survival
+[21:08:31] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:08:37] [Server thread/INFO]: V1addyDaddy was slain by Champly
+[21:08:43] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:08:57] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:09:05] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:09:08] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:09:20] [Server thread/INFO]: V1addyDaddy was slain by Champly
+[21:09:37] [Server thread/INFO]: V1addyDaddy was slain by Champly
+[21:09:41] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:09:45] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:10:00] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[21:10:00] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[21:10:00] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[21:10:00] [Server thread/INFO]: Using 4 threads for Netty based IO
+[21:10:00] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
+[21:10:00] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
+[21:10:00] [Server thread/ERROR]: [Essentials] There's a good chance you're reloading your server right now. If that's the case, why do you hate yourself? Expect no support from the EssentialsX team when using /reload.
+[21:10:00] [Server thread/INFO]: [PeakGambling] Disabling PeakGambling v1.0.0
+[21:10:00] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[21:10:00] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
+[21:10:00] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[21:10:00] [Server thread/INFO]: [LuckPerms] Closing storage...
+[21:10:00] [Server thread/INFO]: [LuckPerms] Goodbye!
+[21:10:00] [Server thread/INFO]: Loaded 1290 recipes
+[21:10:00] [Server thread/INFO]: Loaded 1399 advancements
+[21:10:01] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
+[21:10:01] [Paper Async Command Builder Thread Pool - 16/ERROR]: Caught previously unhandled exception :
+[21:10:01] [Paper Async Command Builder Thread Pool - 16/ERROR]: Paper Async Command Builder Thread Pool - 16
+java.util.ConcurrentModificationException: null
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:1023) ~[?:?]
+	at java.base/java.util.LinkedHashMap$LinkedValueIterator.next(LinkedHashMap.java:1052) ~[?:?]
+	at net.minecraft.commands.Commands.fillUsableCommands(Commands.java:531) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.sendAsync(Commands.java:496) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.lambda$sendCommands$6(Commands.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[21:10:01] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PeakGambling-1.0.0.jar'...
+[21:10:01] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PeakGambling-1.0.0.jar' in 526ms.
+[21:10:01] [Server thread/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[21:10:01] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (4):
+ - Essentials (2.20.1), LuckPerms (5.4.146), PeakGambling (1.0.0), Vault (1.7.3-b131)
+[21:10:01] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
+[21:10:01] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[21:10:01] [Server thread/INFO]: [PeakGambling] Loading server plugin PeakGambling v1.0.0
+[21:10:01] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[21:10:01] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[21:10:01] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
+[21:10:01] [Server thread/INFO]:         __    
+[21:10:01] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
+[21:10:01] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[21:10:01] [Server thread/INFO]: 
+[21:10:01] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[21:10:02] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[21:10:02] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[21:10:02] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[21:10:02] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 619ms)
+[21:10:02] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[21:10:02] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[21:10:02] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[21:10:02] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[21:10:02] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[21:10:02] [Server thread/INFO]: [PeakGambling] Enabling PeakGambling v1.0.0
+[21:10:02] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[21:10:02] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[21:10:02] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[21:10:02] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[21:10:02] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
+[21:10:02] [Server thread/INFO]: [Essentials] Using locale en_GB
+[21:10:03] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[21:10:03] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[21:10:03] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[21:10:03] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[21:10:03] [Server thread/INFO]: CONSOLE: Reload complete.
+[21:10:03] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2673ms or 53 ticks behind
+[21:10:03] [Server thread/INFO]: Timings Reset
+[21:10:03] [Craft Scheduler Thread - 74 - Essentials/INFO]: [Essentials] Fetching version information...
+[21:10:03] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[21:10:03] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:10:03] [Server thread/WARN]: Champly moved too quickly! 2.339755683887141,-28.65295348266874,-1.6395509290236583
+[21:10:03] [Craft Scheduler Thread - 77 - Vault/INFO]: [Vault] Checking for Updates ... 
+[21:10:03] [Craft Scheduler Thread - 77 - Vault/INFO]: [Vault] No new version available
+[21:10:05] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[21:10:24] [Server thread/INFO]: Mathias_pryss issued server command: /effect give @a minecraft:speed infinite 3
+[21:10:24] [Server thread/INFO]: [Mathias_pryss: Applied effect Speed to 4 targets]
+[21:10:36] [Server thread/INFO]: Champly issued server command: /effect clear
+[21:10:36] [Server thread/INFO]: [Champly: Removed every effect from Champly]
+[21:10:41] [Server thread/INFO]: Champly issued server command: /flyspeed walk 2
+[21:10:55] [Server thread/INFO]: V1addyDaddy was slain by Champly
+[21:11:00] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:11:06] [Server thread/INFO]: V1addyDaddy was slain by Champly
+[21:11:08] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:11:14] [Server thread/INFO]: AlbertTheYoung issued server command: /effect clear AlbertTheYoung
+[21:11:14] [Server thread/INFO]: [AlbertTheYoung: Removed every effect from AlbertTheYoung]
+[21:11:15] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:11:21] [Server thread/INFO]: Mathias_pryss was slain by V1addyDaddy
+[21:11:24] [Server thread/INFO]: V1addyDaddy fell from a high place
+[21:11:32] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:11:38] [Server thread/INFO]: V1addyDaddy was slain by Champly
+[21:11:45] [Server thread/INFO]: Mathias_pryss was slain by Champly
+[21:11:50] [Server thread/INFO]: V1addyDaddy was slain by Champly
+[21:11:58] [Server thread/INFO]: V1addyDaddy fell from a high place
+[21:12:00] [Server thread/INFO]: Champly was slain by Mathias_pryss
+[21:12:23] [Async Chat Thread - #8/INFO]: <Champly> vi er ikke inde
+[21:12:27] [Server thread/INFO]: V1addyDaddy was slain by Mathias_pryss
+[21:12:41] [Server thread/INFO]: AlbertTheYoung issued server command: /list
+[21:12:41] [Server thread/INFO]: Champly lost connection: Disconnected
+[21:12:41] [Server thread/INFO]: Champly left the game
+[21:12:43] [Server thread/INFO]: Mathias_pryss lost connection: Disconnected
+[21:12:43] [Server thread/INFO]: Mathias_pryss left the game
+[21:12:47] [Server thread/INFO]: AlbertTheYoung issued server command: /list default
+[21:12:50] [Server thread/INFO]: V1addyDaddy lost connection: Disconnected
+[21:12:50] [Server thread/INFO]: V1addyDaddy left the game
+[21:29:09] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[21:30:05] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[21:30:05] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[21:30:05] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[21:30:05] [Server thread/INFO]: Using 4 threads for Netty based IO
+[21:30:06] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
+[21:30:06] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
+[21:30:06] [Server thread/ERROR]: [Essentials] There's a good chance you're reloading your server right now. If that's the case, why do you hate yourself? Expect no support from the EssentialsX team when using /reload.
+[21:30:06] [Server thread/INFO]: [PeakGambling] Disabling PeakGambling v1.0.0
+[21:30:06] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[21:30:06] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
+[21:30:06] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[21:30:06] [Server thread/INFO]: [LuckPerms] Closing storage...
+[21:30:06] [Server thread/INFO]: [LuckPerms] Goodbye!
+[21:30:06] [Server thread/INFO]: Loaded 1290 recipes
+[21:30:06] [Server thread/INFO]: Loaded 1399 advancements
+[21:30:07] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
+[21:30:07] [Paper Async Command Builder Thread Pool - 18/ERROR]: Caught previously unhandled exception :
+[21:30:07] [Paper Async Command Builder Thread Pool - 18/ERROR]: Paper Async Command Builder Thread Pool - 18
+java.util.ConcurrentModificationException: null
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:1023) ~[?:?]
+	at java.base/java.util.LinkedHashMap$LinkedValueIterator.next(LinkedHashMap.java:1052) ~[?:?]
+	at net.minecraft.commands.Commands.fillUsableCommands(Commands.java:531) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.sendAsync(Commands.java:496) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.commands.Commands.lambda$sendCommands$6(Commands.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[21:30:07] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PeakGambling-1.0.0.jar'...
+[21:30:08] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PeakGambling-1.0.0.jar' in 1058ms.
+[21:30:08] [Server thread/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[21:30:08] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (4):
+ - Essentials (2.20.1), LuckPerms (5.4.146), PeakGambling (1.0.0), Vault (1.7.3-b131)
+[21:30:08] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
+[21:30:08] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[21:30:08] [Server thread/INFO]: [PeakGambling] Loading server plugin PeakGambling v1.0.0
+[21:30:08] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[21:30:08] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[21:30:08] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
+[21:30:10] [Server thread/INFO]:         __    
+[21:30:10] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
+[21:30:10] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[21:30:10] [Server thread/INFO]: 
+[21:30:10] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[21:30:10] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[21:30:11] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[21:30:12] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[21:30:12] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 3391ms)
+[21:30:12] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[21:30:12] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[21:30:12] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[21:30:12] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[21:30:12] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[21:30:12] [Server thread/INFO]: [PeakGambling] Enabling PeakGambling v1.0.0
+[21:30:12] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[21:30:12] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[21:30:13] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[21:30:13] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[21:30:14] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
+[21:30:14] [Server thread/INFO]: [Essentials] Using locale en_GB
+[21:30:14] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[21:30:14] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[21:30:14] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[21:30:14] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[21:30:14] [Server thread/INFO]: CONSOLE: Reload complete.
+[21:30:14] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 8500ms or 170 ticks behind
+[21:30:14] [Server thread/INFO]: Timings Reset
+[21:30:14] [Craft Scheduler Thread - 83 - Essentials/INFO]: [Essentials] Fetching version information...
+[21:30:14] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[21:30:14] [Craft Scheduler Thread - 82 - Vault/INFO]: [Vault] Checking for Updates ... 
+[21:30:14] [Craft Scheduler Thread - 82 - Vault/INFO]: [Vault] No new version available
+[21:30:14] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[21:34:00] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
+[21:34:00] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
+[21:34:00] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[21:34:00] [Server thread/INFO]: Using 4 threads for Netty based IO
+[21:34:00] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
+[21:34:00] [Server thread/INFO]: [Vault] [Economy] Essentials Economy unhooked.
+[21:34:00] [Server thread/ERROR]: [Essentials] There's a good chance you're reloading your server right now. If that's the case, why do you hate yourself? Expect no support from the EssentialsX team when using /reload.
+[21:34:00] [Server thread/INFO]: [PeakGambling] Disabling PeakGambling v1.0.0
+[21:34:00] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[21:34:00] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.146
+[21:34:00] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[21:34:00] [Server thread/INFO]: [LuckPerms] Closing storage...
+[21:34:00] [Server thread/INFO]: [LuckPerms] Goodbye!
+[21:34:00] [Server thread/INFO]: Loaded 1290 recipes
+[21:34:00] [Server thread/INFO]: Loaded 1399 advancements
+[21:34:01] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
+[21:34:01] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins\PeakGambling-1.0.0.jar'...
+[21:34:01] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins\PeakGambling-1.0.0.jar' in 476ms.
+[21:34:01] [Server thread/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[21:34:01] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (4):
+ - Essentials (2.20.1), LuckPerms (5.4.146), PeakGambling (1.0.0), Vault (1.7.3-b131)
+[21:34:01] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.146
+[21:34:02] [Server thread/INFO]: [Vault] Loading server plugin Vault v1.7.3-b131
+[21:34:02] [Server thread/INFO]: [PeakGambling] Loading server plugin PeakGambling v1.0.0
+[21:34:02] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[21:34:02] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[21:34:02] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.146
+[21:34:02] [Server thread/INFO]:         __    
+[21:34:02] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.146
+[21:34:02] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[21:34:02] [Server thread/INFO]: 
+[21:34:02] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[21:34:02] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[21:34:02] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[21:34:03] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[21:34:03] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 998ms)
+[21:34:03] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[21:34:03] [Server thread/INFO]: [Vault] [Economy] Essentials Economy found: Waiting
+[21:34:03] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[21:34:03] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[21:34:03] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[21:34:03] [Server thread/INFO]: [PeakGambling] Enabling PeakGambling v1.0.0
+[21:34:03] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[21:34:03] [Server thread/ERROR]: [Essentials] You are running an unsupported server version!
+[21:34:03] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[21:34:03] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[21:34:03] [Server thread/INFO]: [Essentials] Loaded 39094 items from items.json.
+[21:34:03] [Server thread/INFO]: [Essentials] Using locale en_GB
+[21:34:03] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[21:34:03] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[21:34:03] [Server thread/INFO]: [Vault] [Economy] Essentials Economy hooked.
+[21:34:03] [Server thread/INFO]: [Essentials] Using Vault based permissions (LuckPerms)
+[21:34:03] [Server thread/INFO]: CONSOLE: Reload complete.
+[21:34:03] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 3408ms or 68 ticks behind
+[21:34:03] [Server thread/INFO]: Timings Reset
+[21:34:03] [Craft Scheduler Thread - 87 - Essentials/INFO]: [Essentials] Fetching version information...
+[21:34:03] [Server thread/INFO]: [Essentials] Essentials found a compatible payment resolution method: Vault Compatibility Layer (v1.7.3-b131)!
+[21:34:03] [Craft Scheduler Thread - 86 - Vault/INFO]: [Vault] Checking for Updates ... 
+[21:34:04] [Craft Scheduler Thread - 86 - Vault/INFO]: [Vault] No new version available
+[21:34:04] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[21:34:12] [Server thread/INFO]: AlbertTheYoung issued server command: /eco give AlbertTheYoung 1000
+[21:34:14] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[21:34:31] [Server thread/INFO]: AlbertTheYoung issued server command: /bal
+[23:11:47] [Server thread/INFO]: AlbertTheYoung issued server command: /c
+[23:56:48] [Server thread/INFO]: AlbertTheYoung lost connection: Disconnected
+[23:56:48] [Server thread/INFO]: AlbertTheYoung left the game

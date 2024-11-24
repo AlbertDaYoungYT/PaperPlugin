@@ -8,8 +8,7 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.albertdayoung.allgamblingandcasino.commands.CasinoCommand;
-import com.albertdayoung.allgamblingandcasino.gui.PlayRouletteMain;
-import com.albertdayoung.allgamblingandcasino.gui.PlayerAccount;
+import com.albertdayoung.allgamblingandcasino.gambling.BetOnPlayerDeath;
 
 import io.papermc.lib.PaperLib;
 import net.milkbowl.vault.chat.Chat;
@@ -23,15 +22,18 @@ import net.milkbowl.vault.permission.Permission;
 - TODO: Slots
 - TODO: Blackjack
 - TODO: Bet on next Death
+- TODO: Betting on value of items
+- TODO: Bounties
 */
 
 
 
-public class PaperPlugin extends JavaPlugin {
+public class PeakGambling extends JavaPlugin {
 
-	public static final String PLUGIN = "PaperPlugin";
+	public static final String PLUGIN = "PeakGambling";
 
 	public static YamlConfiguration mainConfig;
+    public static BetOnPlayerDeath deathBets;
     
     private static Economy econ = null;
     private static Permission perms = null;
@@ -40,7 +42,8 @@ public class PaperPlugin extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		PaperLib.suggestPaper(this);
-		mainConfig 			= YamlConfiguration.loadConfiguration(new File(getDataFolder(), "config.yml"));
+		mainConfig = YamlConfiguration.loadConfiguration(new File(getDataFolder(), "config.yml"));
+        deathBets = new BetOnPlayerDeath();
 
 
         if (!setupEconomy() ) {
@@ -51,14 +54,13 @@ public class PaperPlugin extends JavaPlugin {
         setupPermissions();
         setupChat();
 
-        Bukkit.getServer().getPluginManager().registerEvents(new PlayerAccount(), this);
-        Bukkit.getServer().getPluginManager().registerEvents(new PlayRouletteMain(), this);
-		
+        Bukkit.getServer().getPluginManager().registerEvents(new PaperListeners(), this);
+
+
 		this.getCommand("casino").setExecutor(new CasinoCommand(this));
 		
-		//PaperListeners.initialize();
+
 		saveDefaultConfig();
-  
 	}
     
     private boolean setupEconomy() {

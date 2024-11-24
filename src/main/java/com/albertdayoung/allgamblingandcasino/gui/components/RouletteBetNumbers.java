@@ -5,7 +5,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
-import com.albertdayoung.allgamblingandcasino.roulette.RouletteGame;
+import com.albertdayoung.allgamblingandcasino.gambling.RouletteGame;
+import com.albertdayoung.allgamblingandcasino.gui.components.buttons.RouletteBetNumber;
 
 import dev.triumphteam.gui.container.GuiContainer;
 import dev.triumphteam.gui.paper.builder.item.ItemBuilder;
@@ -17,8 +18,10 @@ public class RouletteBetNumbers {
     public static final Material evenItem = Material.BLACK_WOOL;
     public static final Material zeroItem = Material.LIME_WOOL;
 
+    public static final Material selectedItem = Material.LIGHT_GRAY_WOOL;
+
     public static int i = 1;
-        
+    
         
     public static final void invoke(GuiContainer<Player, ItemStack> container, RouletteGame game) {
         @NotNull
@@ -32,23 +35,26 @@ public class RouletteBetNumbers {
                 } else {
                     usedMaterial = oddItem;
                 }
-                
-                container.setItem(row, column, ItemBuilder.from(usedMaterial)
-                                                            .name(Component.text(String.format("Bet on (%s)", i)))
-                                                            .amount(i)
-                                                            .asGuiItem((player, context) -> {
-                                                                game.addBet(String.valueOf(i));
-                                                            })
-                                                );
+
+                RouletteBetNumber bet = new RouletteBetNumber(container, i);
+                if (game.getBets().contains(String.valueOf(i))) {
+                    usedMaterial = selectedItem;
+                }
+                bet.invoke(row, column, usedMaterial, game);
 
                 i++;
             }
         }
-                
-        container.setItem(6, 1, ItemBuilder.from(zeroItem)
+        
+        usedMaterial = zeroItem;
+        if (game.getBets().contains("GREEN")) {
+            usedMaterial = selectedItem;
+        }
+         
+        container.setItem(6, 1, ItemBuilder.from(usedMaterial)
                                                     .name(Component.text(String.format("Bet on (%s)", 0)))
                                                     .asGuiItem((player, context) -> {
-                                                        game.addBet(String.valueOf(0));
+                                                        game.addBet("GREEN");
                                                     })
                                         );
     }

@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
-import com.albertdayoung.allgamblingandcasino.PaperPlugin;
+import com.albertdayoung.allgamblingandcasino.PeakGambling;
 
 import dev.triumphteam.gui.container.GuiContainer;
 import dev.triumphteam.gui.item.GuiItem;
@@ -16,26 +16,26 @@ public class TwoItemCasinoFill {
 
     public static boolean setAlternate = false;
     public static final @NotNull GuiItem<Player, ItemStack> primaryItem = ItemBuilder.from(Material.RED_STAINED_GLASS_PANE)
-                                                                        .name(Component.text(PaperPlugin.mainConfig.getString("translation.gui.casino-border")))
+                                                                        .name(Component.text(" "))
                                                                         .asGuiItem();
     public static final @NotNull GuiItem<Player, ItemStack> alternateItem = ItemBuilder.from(Material.YELLOW_STAINED_GLASS_PANE)
-                                                                        .name(Component.text(PaperPlugin.mainConfig.getString("translation.gui.casino-border")))
+                                                                        .name(Component.text(" "))
                                                                         .asGuiItem();
         
     
     public static final void invoke(GuiContainer<Player, ItemStack> container, int row, int x1, int x2, boolean startState) {
         
         if (startState) {
-            setAlternate = false;
+            setAlternate = true;
         }
 
         for (int column = x1;column <= x2;column++) {
             if (setAlternate) {
-                setAlternate = false;
                 container.setItem(row, column, alternateItem);
+                setAlternate = false;
             } else {
-                setAlternate = true;
                 container.setItem(row, column, primaryItem);
+                setAlternate = true;
             }
         }
     }
@@ -45,16 +45,15 @@ public class TwoItemCasinoFill {
         boolean startState = false;
 
         for (int row = y1; row <= y2; row++) {
-            if (setAlternate) {
+            if (startState) {
+                invoke(container, row, x1, x2, startState);
                 startState = false;
-                invoke(container, row, x1, x2, startState);
             } else {
-                startState = true;
                 invoke(container, row, x1, x2, startState);
+                startState = true;
             }
-            startState = true;
-        }
 
-        setAlternate = false;
+            setAlternate = false;
+        }
     }
 }

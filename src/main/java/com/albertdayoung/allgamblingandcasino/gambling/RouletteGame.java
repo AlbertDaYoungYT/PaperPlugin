@@ -1,4 +1,4 @@
-package com.albertdayoung.allgamblingandcasino.roulette;
+package com.albertdayoung.allgamblingandcasino.gambling;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,38 +6,38 @@ import java.util.Random;
 
 import org.bukkit.OfflinePlayer;
 
-import com.albertdayoung.allgamblingandcasino.PaperPlugin;
+import com.albertdayoung.allgamblingandcasino.PeakGambling;
 
+import dev.triumphteam.nova.ListState;
 import dev.triumphteam.nova.MutableState;
 
 public class RouletteGame {
     OfflinePlayer player;
 
-    ArrayList<String> bets;
     MutableState<Integer> betMultiplier;
+    ListState<String> bets;
     List<String> betOptions;
     boolean canBet = true;
     int betAmount;
 
-    double rouletteGreenNumberPayoutAmount = PaperPlugin.mainConfig.getDouble("roulette.green-number-payout-amount");
-    double rouletteSingleNumberPayoutAmount = PaperPlugin.mainConfig.getDouble("roulette.single-number-payout-amount");
-    double rouletteTwoNumberPayoutAmount = PaperPlugin.mainConfig.getDouble("roulette.two-number-payout-amount");
-    double rouletteThreeNumberPayoutAmount = PaperPlugin.mainConfig.getDouble("roulette.three-number-payout-amount");
-    double rouletteFourNumberPayoutAmount = PaperPlugin.mainConfig.getDouble("roulette.four-number-payout-amount");
-    double rouletteFiveNumberPayoutAmount = PaperPlugin.mainConfig.getDouble("roulette.five-number-payout-amount");
-    double rouletteSixNumberPayoutAmount = PaperPlugin.mainConfig.getDouble("roulette.six-number-payout-amount");
+    double rouletteGreenNumberPayoutAmount = PeakGambling.mainConfig.getDouble("roulette.green-number-payout-amount");
+    double rouletteSingleNumberPayoutAmount = PeakGambling.mainConfig.getDouble("roulette.single-number-payout-amount");
+    double rouletteTwoNumberPayoutAmount = PeakGambling.mainConfig.getDouble("roulette.two-number-payout-amount");
+    double rouletteThreeNumberPayoutAmount = PeakGambling.mainConfig.getDouble("roulette.three-number-payout-amount");
+    double rouletteFourNumberPayoutAmount = PeakGambling.mainConfig.getDouble("roulette.four-number-payout-amount");
+    double rouletteFiveNumberPayoutAmount = PeakGambling.mainConfig.getDouble("roulette.five-number-payout-amount");
+    double rouletteSixNumberPayoutAmount = PeakGambling.mainConfig.getDouble("roulette.six-number-payout-amount");
 
-    double rouletteGroupTwelvePayoutAmount = PaperPlugin.mainConfig.getDouble("roulette.group-twelve-payout-amount");
-    double rouletteHalfsEightteenPayoutAmount = PaperPlugin.mainConfig.getDouble("roulette.halfs-eightteen-payout-amount");
-    double rouletteRedBlackPayoutAmount = PaperPlugin.mainConfig.getDouble("roulette.red-black-eightteen-payout-amount");
-    double rouletteOddsEvenPayoutAmount = PaperPlugin.mainConfig.getDouble("roulette.odds-even-eightteen-payout-amount");
+    double rouletteGroupTwelvePayoutAmount = PeakGambling.mainConfig.getDouble("roulette.group-twelve-payout-amount");
+    double rouletteHalfsEightteenPayoutAmount = PeakGambling.mainConfig.getDouble("roulette.halfs-eightteen-payout-amount");
+    double rouletteRedBlackPayoutAmount = PeakGambling.mainConfig.getDouble("roulette.red-black-eightteen-payout-amount");
+    double rouletteOddsEvenPayoutAmount = PeakGambling.mainConfig.getDouble("roulette.odds-even-eightteen-payout-amount");
     
     
     
     
         public RouletteGame(OfflinePlayer player, int betAmount) {
             this.player = player;
-            this.bets = new ArrayList<>();
             this.betAmount = betAmount;
     
             this.betOptions = new ArrayList<>();
@@ -53,17 +53,17 @@ public class RouletteGame {
             this.betOptions.add("EVEN");
     }
 
-    public final void roll() {
+    public final int roll() {
         int rand = new Random().nextInt(36 - 0 + 1) + 0;
-        boolean isEven = rand % 2 == 0;
         int finalBetAmount = this.betAmount * this.betMultiplier.get();
-        PaperPlugin.getEconomy().withdrawPlayer(player, finalBetAmount);
+        PeakGambling.getEconomy().withdrawPlayer(player, finalBetAmount);
 
         finalBetAmount = calcBetAmount(finalBetAmount, rand);
         finalBetAmount = finalBetAmount - (this.betAmount * this.betMultiplier.get());
 
-        PaperPlugin.getEconomy().depositPlayer(player, finalBetAmount);
-        this.player.getPlayer().sendMessage(String.format("You won $%s", finalBetAmount));
+        // PeakGambling.getEconomy().depositPlayer(player, finalBetAmount);
+        // this.player.getPlayer().sendMessage(String.format("You won $%s", finalBetAmount));
+        return finalBetAmount;
     }
 
     public final int calcBetAmount(int f, int roll) {
@@ -118,13 +118,13 @@ public class RouletteGame {
                     break;
 
                 case "ODDS":
-                    if (roll <= 18 && roll >= 1) {
+                    if (!(roll % 2 == 0)) {
                         f = (int) (f * rouletteRedBlackPayoutAmount);
                     }
                     break;
 
                 case "EVEN":
-                    if (roll <= 36 && roll >= 18) {
+                    if (roll % 2 == 0) {
                         f = (int) (f * rouletteOddsEvenPayoutAmount);
                     }
                     break;
@@ -171,12 +171,17 @@ public class RouletteGame {
         return f;
     }
 
+    public final void reset() {
+        this.betMultiplier.set(1);
+        this.bets.clear();
+    }
+
 
     public final MutableState<Integer> getBetMultipliers() {
         return this.betMultiplier;
     }
 
-    public final ArrayList<String> getBets() {
+    public final ListState<String> getBets() {
         return this.bets;
     }
 
@@ -207,6 +212,10 @@ public class RouletteGame {
             this.canBet = true;
         }
         this.bets.remove(bet);
+    }
+
+    public void setBets(ListState<String> bets) {
+        this.bets = bets;
     }
 
 

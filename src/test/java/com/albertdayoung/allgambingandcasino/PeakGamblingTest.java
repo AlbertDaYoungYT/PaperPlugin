@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
  *
  * @author Copyright (c) Levi Muniz. All Rights Reserved.
  */
-public class PaperPluginTest {
+public class PeakGamblingTest {
 
   @Test
   public void onEnable() {
