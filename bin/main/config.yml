@@ -1,20 +1,4 @@
 # A journey of 1,000 lines starts with a single char
-translation:
-  gui:
-    casino-title: "Casino"
-    casino-border: " "
-
-    casino-back-button-title: "Back"
-    casino-player-button-title: "Casino Account"
-    casino-play-roulette-button-title: "Play Roulette (UNFINISHED)"
-
-    casino-player-button-lore: "Check your account stats"
-    casino-play-roulette-button-lore: " "
-
-
-    leaderboard-button-title: "Check the Leaderboard"
-    leaderboard-button-lore: "Leaderboard is currently unfinished!"
-
 roulette:
   green-number-payout-amount: 36.0
   single-number-payout-amount: 35.0
@@ -28,3 +12,7 @@ roulette:
   halfs-eightteen-payout-amount: 1.5
   red-black-eightteen-payout-amount: 1.5
   odds-even-eightteen-payout-amount: 1.5
+
+
+player-betting:
+  

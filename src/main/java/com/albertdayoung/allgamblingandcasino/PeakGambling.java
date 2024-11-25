@@ -31,8 +31,10 @@ import net.milkbowl.vault.permission.Permission;
 public class PeakGambling extends JavaPlugin {
 
 	public static final String PLUGIN = "PeakGambling";
+    public final File PLUGIN_DATAFOLDER = getDataFolder();
 
 	public static YamlConfiguration mainConfig;
+	public static YamlConfiguration deathBetsData;
     public static BetOnPlayerDeath deathBets;
     
     private static Economy econ = null;
@@ -43,6 +45,7 @@ public class PeakGambling extends JavaPlugin {
 	public void onEnable() {
 		PaperLib.suggestPaper(this);
 		mainConfig = YamlConfiguration.loadConfiguration(new File(getDataFolder(), "config.yml"));
+		deathBetsData = YamlConfiguration.loadConfiguration(new File(getDataFolder(), "death_bets.yml"));
         deathBets = new BetOnPlayerDeath();
 
 
