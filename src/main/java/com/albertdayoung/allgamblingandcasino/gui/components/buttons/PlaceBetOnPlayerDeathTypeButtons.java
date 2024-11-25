@@ -4,7 +4,6 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import com.albertdayoung.allgamblingandcasino.gambling.RouletteGame;
 import com.albertdayoung.allgamblingandcasino.utils.dataclasses.DeathOptionsData;
 
 import dev.triumphteam.gui.container.GuiContainer;

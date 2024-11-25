@@ -6,7 +6,7 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 
 public class BetOnPlayerDeathData {
-    private OfflinePlayer betOwner;
+    private UUID betOwner;
     private UUID playerUuid;
     private DamageCause deathType;
     private double betAmount;
@@ -26,11 +26,11 @@ public class BetOnPlayerDeathData {
         this.deathType = deathType;
     }
 
-    public OfflinePlayer getBetOwner() {
+    public UUID getBetOwner() {
         return betOwner;
     }
 
-    public void setBetOwner(OfflinePlayer betOwner) {
+    public void setBetOwner(UUID betOwner) {
         this.betOwner = betOwner;
     }
 

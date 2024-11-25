@@ -22,7 +22,7 @@ public class BetOnPlayerDeath {
     }
 
 
-    public void placeBet(OfflinePlayer betOwner, UUID betTarget, DamageCause betDamageCause, double betAmount) {
+    public void placeBet(UUID betOwner, UUID betTarget, DamageCause betDamageCause, double betAmount) {
         BetOnPlayerDeathData bet = new BetOnPlayerDeathData();
         bet.setBetOwner(betOwner);
         bet.setPlayerUUID(betTarget);
@@ -41,8 +41,8 @@ public class BetOnPlayerDeath {
         return isBet;
     }
 
-    public OfflinePlayer getBetOwner(UUID playerUuid) {
-        OfflinePlayer playerOwner = null;
+    public UUID getBetOwner(UUID playerUuid) {
+        UUID playerOwner = null;
         for (int i = 0; i < bets.size(); i++) {
             if (bets.get(i).getPlayerUUID().equals(playerUuid)) {
                 playerOwner = bets.get(i).getBetOwner();
@@ -64,7 +64,7 @@ public class BetOnPlayerDeath {
 
     public void save(YamlConfiguration deathBetsData) {
         for (int i = 0; i < this.bets.size(); i++) {
-            deathBetsData.addDefault(String.format("data.%s.%s", String.valueOf(i), "playerBetOwner"), this.bets.get(i).getBetOwner().getUniqueId().toString());
+            deathBetsData.addDefault(String.format("data.%s.%s", String.valueOf(i), "playerBetOwner"), this.bets.get(i).toString());
             deathBetsData.addDefault(String.format("data.%s.%s", String.valueOf(i), "playerBetTarget"), this.bets.get(i).getPlayerUUID().toString());
             deathBetsData.addDefault(String.format("data.%s.%s", String.valueOf(i), "playerBetDeath"), this.bets.get(i).getDeathType().name());
             deathBetsData.addDefault(String.format("data.%s.%s", String.valueOf(i), "playerBetAmount"), String.valueOf(this.bets.get(i).getBetAmount()));

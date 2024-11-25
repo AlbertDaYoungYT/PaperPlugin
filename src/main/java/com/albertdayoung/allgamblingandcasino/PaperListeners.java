@@ -2,6 +2,7 @@ package com.albertdayoung.allgamblingandcasino;
 
 import java.util.UUID;
 
+import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -28,9 +29,9 @@ public class PaperListeners implements Listener {
             // Next we process logic on if the dead Player had a bet on it
             if (PeakGambling.deathBets.isBetOnPlayer(playerUuid)) {
                 if (PeakGambling.deathBets.getBetDeathCause(playerUuid).equals(damageCause)) {
-                    OfflinePlayer playerBetOwner = PeakGambling.deathBets.getBetOwner(playerUuid);
-                    PeakGambling.getEconomy().depositPlayer(playerBetOwner, 0.0);
-                    playerBetOwner.getPlayer().sendMessage("The Player you bet on died and you got ($%s)");
+                    UUID playerBetOwner = PeakGambling.deathBets.getBetOwner(playerUuid);
+                    PeakGambling.getEconomy().depositPlayer(Bukkit.getServer().getPlayer(playerBetOwner), 0.0);
+                    Bukkit.getServer().getPlayer(playerBetOwner).sendMessage("The Player you bet on died and you got ($%s)");
                 }
             }
             //Bukkit.getServer().broadcastMessage(String.format("Player '%s' died by '%s' with cause '%s'", player.getName(), entityEvent.getDamager().getType().toString(), damageCause.toString()));
