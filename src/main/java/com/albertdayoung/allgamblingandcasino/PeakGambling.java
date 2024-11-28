@@ -46,7 +46,7 @@ public class PeakGambling extends JavaPlugin {
 		PaperLib.suggestPaper(this);
 		mainConfig = YamlConfiguration.loadConfiguration(new File(getDataFolder(), "config.yml"));
 		deathBetsData = YamlConfiguration.loadConfiguration(new File(getDataFolder(), "death_bets.yml"));
-        deathBets = new BetOnPlayerDeath();
+        deathBets = new BetOnPlayerDeath(deathBetsData);
 
 
         if (!setupEconomy() ) {

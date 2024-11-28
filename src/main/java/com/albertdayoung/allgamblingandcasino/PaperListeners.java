@@ -3,7 +3,6 @@ package com.albertdayoung.allgamblingandcasino;
 import java.util.UUID;
 
 import org.bukkit.Bukkit;
-import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -11,7 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 import org.bukkit.event.entity.EntityDeathEvent;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerChatEvent;
 
 public class PaperListeners implements Listener {
     
@@ -31,7 +30,7 @@ public class PaperListeners implements Listener {
                 if (PeakGambling.deathBets.getBetDeathCause(playerUuid).equals(damageCause)) {
                     UUID playerBetOwner = PeakGambling.deathBets.getBetOwner(playerUuid);
                     PeakGambling.getEconomy().depositPlayer(Bukkit.getServer().getPlayer(playerBetOwner), 0.0);
-                    Bukkit.getServer().getPlayer(playerBetOwner).sendMessage("The Player you bet on died and you got ($%s)");
+                    Bukkit.getServer().getPlayer(playerBetOwner).sendMessage(String.format("The Player you bet on died and you got ($%s)", String.valueOf(PeakGambling.deathBets.getBet(playerUuid).getBetAmount())));
                 }
             }
             //Bukkit.getServer().broadcastMessage(String.format("Player '%s' died by '%s' with cause '%s'", player.getName(), entityEvent.getDamager().getType().toString(), damageCause.toString()));
@@ -40,15 +39,10 @@ public class PaperListeners implements Listener {
 
 
     @EventHandler
-    public void onSigmaMessageChat(AsyncPlayerChatEvent event) {
+    public void onSigmaMessageChat(PlayerChatEvent event) {
         String message = event.getMessage();
-        if (message.contains("sigma")) {
-            Thread t = new Thread() {
-                public void run() {
-                    event.getPlayer().kickPlayer("DON'T!!!");
-                }
-            };
-            t.start();
+        if (message != null && message.contains("sigma")) {
+            event.getPlayer().kickPlayer("DON'T!!!");
         }
     }
 }

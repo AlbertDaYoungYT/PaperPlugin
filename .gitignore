@@ -1,5 +1,6 @@
 .gradle/
 build/
+bin/
 
 server/world/
 server/logs/

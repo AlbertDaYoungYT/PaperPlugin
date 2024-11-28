@@ -1,10 +1,8 @@
 package com.albertdayoung.allgamblingandcasino.gambling;
 
-import java.util.Collections;
-import java.util.List;
+import java.util.ArrayList;
 import java.util.UUID;
 
-import org.bukkit.OfflinePlayer;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 
@@ -14,11 +12,15 @@ import com.albertdayoung.allgamblingandcasino.utils.dataclasses.BetOnPlayerDeath
 
 
 public class BetOnPlayerDeath {
-    List<BetOnPlayerDeathData> bets;
+    ArrayList<BetOnPlayerDeathData> bets;
+    YamlConfiguration deathBetsData;
 
     
-    public BetOnPlayerDeath() {
-        this.bets = Collections.emptyList();
+    public BetOnPlayerDeath(YamlConfiguration deathBetsData) {
+        this.bets = new ArrayList<BetOnPlayerDeathData>();
+        this.deathBetsData = deathBetsData;
+
+        this.load();
     }
 
 
@@ -29,6 +31,8 @@ public class BetOnPlayerDeath {
         bet.setDeathType(betDamageCause);
         bet.setBetAmount(betAmount);
         this.bets.add(bet);
+
+        this.save();
     }
 
     public boolean isBetOnPlayer(UUID playerUuid) {
@@ -39,6 +43,16 @@ public class BetOnPlayerDeath {
             }
         }
         return isBet;
+    }
+
+    public BetOnPlayerDeathData getBet(UUID playerUuid) {
+        BetOnPlayerDeathData bet = null;
+        for (int i = 0; i < bets.size(); i++) {
+            if (bets.get(i).getPlayerUUID().equals(playerUuid)) {
+                bet = bets.get(i);
+            }
+        }
+        return bet;
     }
 
     public UUID getBetOwner(UUID playerUuid) {
@@ -62,7 +76,7 @@ public class BetOnPlayerDeath {
     }
 
 
-    public void save(YamlConfiguration deathBetsData) {
+    public void save() {
         for (int i = 0; i < this.bets.size(); i++) {
             deathBetsData.addDefault(String.format("data.%s.%s", String.valueOf(i), "playerBetOwner"), this.bets.get(i).toString());
             deathBetsData.addDefault(String.format("data.%s.%s", String.valueOf(i), "playerBetTarget"), this.bets.get(i).getPlayerUUID().toString());
@@ -70,7 +84,7 @@ public class BetOnPlayerDeath {
             deathBetsData.addDefault(String.format("data.%s.%s", String.valueOf(i), "playerBetAmount"), String.valueOf(this.bets.get(i).getBetAmount()));
         }
     }
-    public void load(YamlConfiguration deathBetsData) {
+    public void load() {
         
     }
 }
