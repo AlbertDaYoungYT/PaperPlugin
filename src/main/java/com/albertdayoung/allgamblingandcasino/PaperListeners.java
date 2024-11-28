@@ -12,6 +12,7 @@ import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.player.PlayerChatEvent;
 
+
 public class PaperListeners implements Listener {
     
     @EventHandler
@@ -26,11 +27,14 @@ public class PaperListeners implements Listener {
             UUID playerUuid = player.getUniqueId();
 
             // Next we process logic on if the dead Player had a bet on it
+            UUID playerBetOwner = PeakGambling.deathBets.getBetOwner(playerUuid);
+
             if (PeakGambling.deathBets.isBetOnPlayer(playerUuid)) {
                 if (PeakGambling.deathBets.getBetDeathCause(playerUuid).equals(damageCause)) {
-                    UUID playerBetOwner = PeakGambling.deathBets.getBetOwner(playerUuid);
-                    PeakGambling.getEconomy().depositPlayer(Bukkit.getServer().getPlayer(playerBetOwner), 0.0);
-                    Bukkit.getServer().getPlayer(playerBetOwner).sendMessage(String.format("The Player you bet on died and you got ($%s)", String.valueOf(PeakGambling.deathBets.getBet(playerUuid).getBetAmount())));
+                    PeakGambling.getEconomy().depositPlayer(Bukkit.getServer().getPlayer(playerBetOwner), PeakGambling.deathBets.getBet(playerUuid).getBetAmount()*2);
+                    Bukkit.getServer().broadcastMessage(String.format("[%s] (%s) bet on (%s) died and got ($%s)", PeakGambling.PLUGIN, Bukkit.getServer().getPlayer(playerBetOwner).getName(), Bukkit.getServer().getPlayer(playerUuid).getName(), String.valueOf(PeakGambling.deathBets.getBet(playerUuid).getBetAmount())));
+                    PeakGambling.deathBets.removeBet(playerBetOwner, playerUuid);
+                } else {
                     PeakGambling.deathBets.removeBet(playerBetOwner, playerUuid);
                 }
             }
