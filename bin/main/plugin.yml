@@ -9,6 +9,9 @@ commands:
     description: Open Casino GUI
     usage: "For a list of commands, type /casino help"
     aliases: [c]
+  bets:
+    description: Get bets on players
+    usage: "For a list of commands, type /casino help"
 
 permissions:
   gamblingcasino.play:

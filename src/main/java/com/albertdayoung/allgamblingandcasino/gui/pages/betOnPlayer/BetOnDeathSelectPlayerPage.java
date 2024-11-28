@@ -95,12 +95,11 @@ public class BetOnDeathSelectPlayerPage extends GuiContainerLayout {
         this.selectPageContainer.setItem(2, 5, ItemBuilder.from(Material.GOLD_BLOCK)
                 .name(Component.text(String.format("Bet on $%s", Bukkit.getServer().getPlayer(this.betTarget.get()))))
                 .asGuiItem((player, context) -> {
-                    player.sendMessage(player.getUniqueId().toString());
-                    player.sendMessage(this.betTarget.get().toString());
-                    player.sendMessage(this.betCause.getCauseOptions().toString());
-                    player.sendMessage(this.betAmount.toString());
-                    PeakGambling.deathBets.placeBet(player.getUniqueId(), this.betTarget.get(), this.betCause.getCauseOptions(), this.betAmount);
-                    player.sendMessage(String.format("It works ($%s)", Bukkit.getServer().getPlayer(this.betTarget.get())));
+                    if (this.betTarget.get() != new UUID(0, 0)) {
+                        PeakGambling.deathBets.placeBet(player.getUniqueId(), this.betTarget.get(), this.betCause.getCauseOptions(), this.betAmount);
+                        player.sendMessage(String.format("It works ($%s)", Bukkit.getServer().getPlayer(this.betTarget.get())));
+                        player.closeInventory();
+                    }
                 })
         );
     }

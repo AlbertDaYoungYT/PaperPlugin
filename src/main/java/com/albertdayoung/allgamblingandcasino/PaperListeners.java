@@ -31,6 +31,7 @@ public class PaperListeners implements Listener {
                     UUID playerBetOwner = PeakGambling.deathBets.getBetOwner(playerUuid);
                     PeakGambling.getEconomy().depositPlayer(Bukkit.getServer().getPlayer(playerBetOwner), 0.0);
                     Bukkit.getServer().getPlayer(playerBetOwner).sendMessage(String.format("The Player you bet on died and you got ($%s)", String.valueOf(PeakGambling.deathBets.getBet(playerUuid).getBetAmount())));
+                    PeakGambling.deathBets.removeBet(playerBetOwner, playerUuid);
                 }
             }
             //Bukkit.getServer().broadcastMessage(String.format("Player '%s' died by '%s' with cause '%s'", player.getName(), entityEvent.getDamager().getType().toString(), damageCause.toString()));

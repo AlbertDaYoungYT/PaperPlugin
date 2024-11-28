@@ -1,6 +1,7 @@
 package com.albertdayoung.allgamblingandcasino;
 
 import java.io.File;
+import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -8,6 +9,7 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.albertdayoung.allgamblingandcasino.commands.CasinoCommand;
+import com.albertdayoung.allgamblingandcasino.commands.MainDebugCommand;
 import com.albertdayoung.allgamblingandcasino.gambling.BetOnPlayerDeath;
 
 import io.papermc.lib.PaperLib;
@@ -30,11 +32,14 @@ import net.milkbowl.vault.permission.Permission;
 
 public class PeakGambling extends JavaPlugin {
 
-	public static final String PLUGIN = "PeakGambling";
+    public static final String PLUGIN = "PeakGambling";
+    public static final Logger LOGGER = Bukkit.getLogger();
     public final File PLUGIN_DATAFOLDER = getDataFolder();
 
+	public File mainConfigFile = new File(getDataFolder(), "config.yml");
+	public File deathBetsDataFile = new File(getDataFolder(), "death_bets.json");
+
 	public static YamlConfiguration mainConfig;
-	public static YamlConfiguration deathBetsData;
     public static BetOnPlayerDeath deathBets;
     
     private static Economy econ = null;
@@ -44,9 +49,8 @@ public class PeakGambling extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		PaperLib.suggestPaper(this);
-		mainConfig = YamlConfiguration.loadConfiguration(new File(getDataFolder(), "config.yml"));
-		deathBetsData = YamlConfiguration.loadConfiguration(new File(getDataFolder(), "death_bets.yml"));
-        deathBets = new BetOnPlayerDeath(deathBetsData);
+		mainConfig = YamlConfiguration.loadConfiguration(mainConfigFile);
+        deathBets = new BetOnPlayerDeath(deathBetsDataFile);
 
 
         if (!setupEconomy() ) {
@@ -61,9 +65,12 @@ public class PeakGambling extends JavaPlugin {
 
 
 		this.getCommand("casino").setExecutor(new CasinoCommand(this));
+		this.getCommand("bets").setExecutor(new MainDebugCommand(this));
 		
 
-		saveDefaultConfig();
+		saveConfig();
+
+        LOGGER.info(String.format("[%s] Using mainConfig '%s' with data {%s}", PLUGIN, mainConfigFile.getAbsolutePath(), mainConfig.toString()));
 	}
     
     private boolean setupEconomy() {

@@ -1,24 +1,37 @@
 package com.albertdayoung.allgamblingandcasino.gambling;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Reader;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 
+import com.albertdayoung.allgamblingandcasino.PeakGambling;
 import com.albertdayoung.allgamblingandcasino.utils.dataclasses.BetOnPlayerDeathData;
+import com.albertdayoung.allgamblingandcasino.utils.dataclasses.BetOnPlayerDeathDataList;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.reflect.TypeToken;
 
 
 
 
 public class BetOnPlayerDeath {
-    ArrayList<BetOnPlayerDeathData> bets;
-    YamlConfiguration deathBetsData;
+    @SerializedName("bets")
+    BetOnPlayerDeathDataList bets;
+    File deathBetsDataFile;
 
     
-    public BetOnPlayerDeath(YamlConfiguration deathBetsData) {
-        this.bets = new ArrayList<BetOnPlayerDeathData>();
-        this.deathBetsData = deathBetsData;
+    public BetOnPlayerDeath(File deathBetsDataFile) {
+        this.bets = new BetOnPlayerDeathDataList();
+        this.deathBetsDataFile = deathBetsDataFile;
 
         this.load();
     }
@@ -35,56 +48,73 @@ public class BetOnPlayerDeath {
         this.save();
     }
 
+    public void removeBet(UUID betOwner, UUID betTarget) {
+        BetOnPlayerDeathData bet = this.getBet(betTarget);
+        if (bet != null) {
+            this.bets.remove(bet);
+            this.save();
+        }
+    }
+
+    public BetOnPlayerDeathDataList getBets() {
+        return bets;
+    }
+
     public boolean isBetOnPlayer(UUID playerUuid) {
-        boolean isBet = false;
-        for (int i = 0; i < bets.size(); i++) {
-            if (bets.get(i).getPlayerUUID().equals(playerUuid)) {
-                isBet = true;
+        for (BetOnPlayerDeathData bet : this.bets.getBets()) {
+            if (bet.getPlayerUUID().equals(playerUuid)) {
+                return true;
             }
         }
-        return isBet;
+        return false;
     }
 
     public BetOnPlayerDeathData getBet(UUID playerUuid) {
-        BetOnPlayerDeathData bet = null;
-        for (int i = 0; i < bets.size(); i++) {
-            if (bets.get(i).getPlayerUUID().equals(playerUuid)) {
-                bet = bets.get(i);
+        for (BetOnPlayerDeathData bet : this.bets.getBets()) {
+            if (bet.getPlayerUUID().equals(playerUuid)) {
+                return bet;
             }
         }
-        return bet;
+        return null;
     }
 
     public UUID getBetOwner(UUID playerUuid) {
-        UUID playerOwner = null;
-        for (int i = 0; i < bets.size(); i++) {
-            if (bets.get(i).getPlayerUUID().equals(playerUuid)) {
-                playerOwner = bets.get(i).getBetOwner();
-            }
-        }
-        return playerOwner;
+        BetOnPlayerDeathData bet = this.getBet(playerUuid);
+        return bet != null ? bet.getBetOwner() : null;
     }
 
     public DamageCause getBetDeathCause(UUID playerUuid) {
-        DamageCause deathCause = null;
-        for (int i = 0; i < bets.size(); i++) {
-            if (bets.get(i).getPlayerUUID().equals(playerUuid)) {
-                deathCause = bets.get(i).getDeathType();
-            }
-        }
-        return deathCause;
+        BetOnPlayerDeathData bet = this.getBet(playerUuid);
+        return bet != null ? bet.getDeathType() : null;
     }
 
 
     public void save() {
-        for (int i = 0; i < this.bets.size(); i++) {
-            deathBetsData.addDefault(String.format("data.%s.%s", String.valueOf(i), "playerBetOwner"), this.bets.get(i).toString());
-            deathBetsData.addDefault(String.format("data.%s.%s", String.valueOf(i), "playerBetTarget"), this.bets.get(i).getPlayerUUID().toString());
-            deathBetsData.addDefault(String.format("data.%s.%s", String.valueOf(i), "playerBetDeath"), this.bets.get(i).getDeathType().name());
-            deathBetsData.addDefault(String.format("data.%s.%s", String.valueOf(i), "playerBetAmount"), String.valueOf(this.bets.get(i).getBetAmount()));
+        Gson gson = new GsonBuilder().create();
+
+        try (FileWriter writer = new FileWriter(deathBetsDataFile)) {
+            gson.toJson(this.bets, writer);
+        } catch (IOException e) {
+            PeakGambling.LOGGER.warning("Error saving data file: " + e.getMessage());
         }
     }
+
     public void load() {
-        
+        Gson gson = new Gson();
+
+        try (Reader reader = new FileReader(deathBetsDataFile)) {
+            ArrayList<BetOnPlayerDeathData> betData = gson.fromJson(reader, new TypeToken<ArrayList<BetOnPlayerDeathData>>() {}.getType());
+
+            if (betData != null) {
+                this.bets.addAll(betData);
+                for (BetOnPlayerDeathData data : betData) {
+                    PeakGambling.LOGGER.info(data.toString());
+                }
+            } else {
+                // Handle the case where there's no data
+            }
+        } catch (IOException e) {
+            PeakGambling.LOGGER.warning("Error loading data file: " + e.getMessage());
+        }
     }
 }

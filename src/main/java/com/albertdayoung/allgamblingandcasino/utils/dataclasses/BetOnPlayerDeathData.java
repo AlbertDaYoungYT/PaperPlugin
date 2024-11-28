@@ -2,15 +2,25 @@ package com.albertdayoung.allgamblingandcasino.utils.dataclasses;
 
 import java.util.UUID;
 
-import org.bukkit.OfflinePlayer;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 
+import com.google.gson.annotations.SerializedName;
+
 public class BetOnPlayerDeathData {
+    @SerializedName("betOwner")
     private UUID betOwner;
+
+    @SerializedName("playerUuid")
     private UUID playerUuid;
+    
+    @SerializedName("deathType")
     private DamageCause deathType;
+    
+    @SerializedName("betAmount")
     private double betAmount;
 
+
+    
     public BetOnPlayerDeathData(){}
 
     public UUID getPlayerUUID(){
