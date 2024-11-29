@@ -2,6 +2,8 @@ package com.albertdayoung.allgamblingandcasino.gui.pages.betOnPlayer;
 
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -15,10 +17,12 @@ import org.bukkit.inventory.ItemStack;
 import com.albertdayoung.allgamblingandcasino.PeakGambling;
 import com.albertdayoung.allgamblingandcasino.gui.components.buttons.NextPreviousButtons;
 import com.albertdayoung.allgamblingandcasino.gui.components.helpers.GuiContainerLayout;
-import com.albertdayoung.allgamblingandcasino.utils.LeaderboardSort;
+import static com.albertdayoung.allgamblingandcasino.gui.components.theme.Theme.defaultChatMessage;
 import com.albertdayoung.allgamblingandcasino.utils.PlayerHead;
 import com.albertdayoung.allgamblingandcasino.utils.dataclasses.DeathOptionsData;
 
+import dev.triumphteam.gui.click.ClickContext;
+import dev.triumphteam.gui.click.action.RunnableGuiClickAction;
 import dev.triumphteam.gui.container.GuiContainer;
 import dev.triumphteam.gui.paper.Gui;
 import dev.triumphteam.gui.paper.builder.item.ItemBuilder;
@@ -31,8 +35,7 @@ public class BetOnDeathSelectPlayerPage extends GuiContainerLayout {
     DeathOptionsData betCause;
     Integer betAmount;
     GuiContainer<Player, ItemStack> selectPageContainer;
-    LeaderboardSort sorter;
-    List<String> players;
+    List<OfflinePlayer> players;
 
     Player guiPlayer;
 
@@ -43,7 +46,6 @@ public class BetOnDeathSelectPlayerPage extends GuiContainerLayout {
         this.betTarget = null;
         this.betCause = betCause;
         this.betAmount = betAmount;
-        this.sorter = new LeaderboardSort(Bukkit.getOfflinePlayers());
 
         this.guiPlayer = null;
     }
@@ -74,40 +76,83 @@ public class BetOnDeathSelectPlayerPage extends GuiContainerLayout {
     }
 
     public final void showPlayerSelector(int row, int column) {
-        
-        this.players = this.sorter.sort();
-        this.players.remove(this.guiPlayer.getUniqueId().toString());
-        int playerListLength = players.size();
-        Material usedMaterial;
+        OfflinePlayer[] offlinePlayersArray = Bukkit.getOfflinePlayers();
 
-        for (int playerIndex = 0+(this.pageNumber.get()*9); playerIndex < 9+(this.pageNumber.get()*9); playerIndex++) {
+        // Convert the array to a List for easy sorting and modification
+        this.players = new ArrayList<>(Arrays.asList(offlinePlayersArray));
+
+        // Remove your own player from the list if it exists
+        UUID yourUUID = this.guiPlayer.getUniqueId();
+        removeYourselfFromPlayerList(yourUUID);
+        removeOfflinePlayersFromPlayerList();
+
+        // Sort the list alphabetically by name
+        sortPlayersByName(this.players);
+
+        int playerListLength = this.players.size();
+
+        for (int playerIndex = 0 + (this.pageNumber.get() * 9);
+            playerIndex < 9 + (this.pageNumber.get() * 9);
+            playerIndex++) {
             if (playerIndex < playerListLength) {
-                OfflinePlayer currentPlayer = Bukkit.getOfflinePlayer(UUID.fromString(this.players.get(playerIndex)));
-                if (currentPlayer.getUniqueId().equals(this.betTarget.get())) {
-                    usedMaterial = Material.GRAY_WOOL;
-                } else {
-                    usedMaterial = PlayerHead.getPlayerHead(currentPlayer.getUniqueId()).getType();
-                }
-                this.selectPageContainer.setItem(row, column, ItemBuilder.from(usedMaterial)
-                        .name(Component.text(currentPlayer.getName()))
-                        .asGuiItem((player, context) -> {
-                            this.betTarget.update(previous -> currentPlayer.getUniqueId());
-                        })
-                );
-                column++;
+                OfflinePlayer currentPlayer = this.players.get(playerIndex);
+                selectPlayerItem(row, column++, currentPlayer);
             }
         }
 
-        this.selectPageContainer.setItem(2, 5, ItemBuilder.from(Material.GOLD_BLOCK)
-                .name(Component.text(String.format("Bet on $%s", Bukkit.getServer().getPlayer(this.betTarget.get()))))
+        // Add the "Bet" button
+        addBetButton(2, 5);
+    }
+
+    private void removeYourselfFromPlayerList(UUID yourUUID) {
+        this.players.removeIf(player -> player.getUniqueId().equals(yourUUID));
+        this.players.removeIf(player -> player.getName().equals(Bukkit.getPlayer(yourUUID).getName()));
+    }
+
+    private void removeOfflinePlayersFromPlayerList() {
+        this.players.removeIf(player -> player.isOnline() == false);
+    }
+
+    private void sortPlayersByName(List<OfflinePlayer> players) {
+        players.sort((player1, player2) ->
+            player1.getName().compareTo(player2.getName())
+        );
+    }
+
+    private void selectPlayerItem(int row, int column, OfflinePlayer currentPlayer) {
+        ItemStack itemStack = PlayerHead.getPlayerHead(currentPlayer.getUniqueId());
+        if (currentPlayer.getUniqueId().equals(this.betTarget.get())) {
+            itemStack = new ItemStack(Material.GRAY_WOOL);
+        }
+
+        this.selectPageContainer.setItem(row, column, ItemBuilder.from(itemStack)
+                .name(Component.text(currentPlayer.getName()))
                 .asGuiItem((player, context) -> {
-                    if (this.betTarget.get() != new UUID(0, 0)) {
-                        PeakGambling.deathBets.placeBet(player.getUniqueId(), this.betTarget.get(), this.betCause.getCauseOptions(), this.betAmount);
-                        PeakGambling.getEconomy().withdrawPlayer(player, this.betAmount);
-                        
-                        player.closeInventory();
-                    }
+                    this.betTarget.update(previous -> currentPlayer.getUniqueId());
                 })
+        );
+    }
+
+    private void addBetButton(int row, int column) {
+        this.selectPageContainer.setItem(row, column, ItemBuilder.from(Material.GOLD_BLOCK)
+                .name(Component.text(String.format("Bet on $%s", Bukkit.getServer().getPlayer(Bukkit.getServer().getOfflinePlayer(this.betTarget.get()).getName() != null ? Bukkit.getServer().getOfflinePlayer(this.betTarget.get()).getName() : "Unknown Player"))))
+                .asGuiItem(new RunnableGuiClickAction<Player>() {
+            @Override
+            public void run(Player player, ClickContext context) {
+                if (!(BetOnDeathSelectPlayerPage.this.betTarget.get().toString().equals("00000000-0000-0000-0000-000000000000"))) {
+                    PeakGambling.deathBets.placeBet(player.getUniqueId(), BetOnDeathSelectPlayerPage.this.betTarget.get(), BetOnDeathSelectPlayerPage.this.betCause.getCauseOptions(), BetOnDeathSelectPlayerPage.this.betAmount);
+                    PeakGambling.getEconomy().withdrawPlayer(player, BetOnDeathSelectPlayerPage.this.betAmount);
+
+                    player.sendMessage(defaultChatMessage(String.format("You bet <black>(<red>$%s<black>)", BetOnDeathSelectPlayerPage.this.betAmount)));
+
+                    player.closeInventory();
+                } else {
+                    player.sendMessage(defaultChatMessage("Please select a Player"));
+                    player.closeInventory();
+                }
+
+            }
+        })
         );
     }
 }

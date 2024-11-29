@@ -58,10 +58,8 @@ public class BetOnDeathTypePage extends GuiContainerLayout {
                     container.setItem(6, 5, ItemBuilder.from(Material.GOLD_BLOCK)
                             .name(Component.text(String.format("Bet on (%s)", this.betCause.get().getCauseOptionsTitle())))
                             .asGuiItem((player, context) -> {
-                                //nextPage.open(_player);
                                 BetOnDeathSelectPlayerPage selectPlayerPage = new BetOnDeathSelectPlayerPage(this.betCause.get(), this.betAmount);
                                 selectPlayerPage.open(_player);
-                                _player.sendMessage(String.format("It works ($%s)", this.betCause.get().getCauseOptions().name()));
                             })
                     );
                     BackToMainMenuButton.invoke(container, 6, 4);

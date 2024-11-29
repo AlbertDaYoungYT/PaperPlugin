@@ -9,7 +9,6 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.albertdayoung.allgamblingandcasino.commands.CasinoCommand;
-import com.albertdayoung.allgamblingandcasino.commands.MainDebugCommand;
 import com.albertdayoung.allgamblingandcasino.gambling.BetOnPlayerDeath;
 
 import io.papermc.lib.PaperLib;
@@ -27,6 +26,8 @@ import net.milkbowl.vault.permission.Permission;
 - TODO: Bet on next Death
 - TODO: Betting on value of items
 - TODO: Bounties
+
+TODO: Add the third menu item in the left side of MainCasino, it could maybe be a list of the Players bets.
 */
 
 
@@ -66,16 +67,16 @@ public class PeakGambling extends JavaPlugin {
         setupPermissions();
         setupChat();
 
+        LOGGER.info(String.format("[%s] Registering Events...", PLUGIN));
         Bukkit.getServer().getPluginManager().registerEvents(new PaperListeners(), this);
 
 
+        LOGGER.info(String.format("[%s] Registering Commands...", PLUGIN));
 		this.getCommand("casino").setExecutor(new CasinoCommand(this));
-		this.getCommand("bets").setExecutor(new MainDebugCommand(this));
+		//this.getCommand("bets").setExecutor(new MainDebugCommand(this));
 		
 
 		saveConfig();
-
-        LOGGER.info(String.format("[%s] Using mainConfig '%s' with data {%s}", PLUGIN, mainConfigFile.getAbsolutePath(), mainConfig.toString()));
 	}
     
     private boolean setupEconomy() {

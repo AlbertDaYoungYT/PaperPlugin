@@ -27,7 +27,7 @@ if (hasProperty('ver')) {
 
 // If the tag includes "-RC-" or no tag is supplied, append "-SNAPSHOT"
 int rcIdx
-shortVersion = "1.0.0"
+shortVersion = "1.5.15"
 if (shortVersion == null || shortVersion == "") {
     version = getTime() + "-SNAPSHOT"
 } else if ((rcIdx = shortVersion.indexOf("-RC-")) != -1) {
@@ -77,6 +77,7 @@ repositories {
             includeGroup 'org.spigotmc'
         }
     }
+    
     maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
     maven { url = 'https://oss.sonatype.org/content/repositories/central' }
 

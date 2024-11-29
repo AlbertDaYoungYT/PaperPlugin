@@ -5,9 +5,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 import org.bukkit.Bukkit;
@@ -20,8 +18,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
-
-import net.kyori.adventure.text.Component;
 
 
 
@@ -48,7 +44,7 @@ public class BetOnPlayerDeath {
         bet.setBetAmount(betAmount);
         this.bets.add(bet);
 
-        PeakGambling.getEconomy().withdrawPlayer(Bukkit.getServer().getPlayer(betOwner), betAmount);
+        PeakGambling.LOGGER.info(String.format("[%s] Added bet for (%s) on (%s)", PeakGambling.PLUGIN, Bukkit.getPlayer(betOwner).getName(), Bukkit.getPlayer(betTarget).getName()));
 
         this.save();
     }
@@ -95,16 +91,19 @@ public class BetOnPlayerDeath {
 
 
     public void save() {
+        PeakGambling.LOGGER.info(String.format("[%s] Saving 'death_bets.json'...", PeakGambling.PLUGIN));
         Gson gson = new GsonBuilder().create();
 
         try (FileWriter writer = new FileWriter(deathBetsDataFile)) {
             gson.toJson(this.bets.getBets(), writer);
+            PeakGambling.LOGGER.info(String.format("[%s] Saved 'death_bets.json'", PeakGambling.PLUGIN));
         } catch (IOException e) {
-            PeakGambling.LOGGER.warning("Error saving data file: " + e.getMessage());
+            PeakGambling.LOGGER.warning(String.format("[%s] Error Saving 'death_bets.json'  : %s", PeakGambling.PLUGIN, e.getMessage()));
         }
     }
 
     public void load() {
+        PeakGambling.LOGGER.info(String.format("[%s] Loading 'death_bets.json'...", PeakGambling.PLUGIN));
         Gson gson = new Gson();
 
         try (Reader reader = new FileReader(deathBetsDataFile)) {
@@ -112,14 +111,15 @@ public class BetOnPlayerDeath {
 
             if (betData != null) {
                 this.bets.addAll(betData);
-                for (BetOnPlayerDeathData data : betData) {
-                    PeakGambling.LOGGER.info(data.toString());
-                }
+                //for (BetOnPlayerDeathData data : betData) {
+                //    PeakGambling.LOGGER.info(data.toString());
+                //}
             } else {
                 // Handle the case where there's no data
             }
+            PeakGambling.LOGGER.info(String.format("[%s] Successfully Loaded 'death_bets.json'", PeakGambling.PLUGIN));
         } catch (IOException e) {
-            PeakGambling.LOGGER.warning("Error loading data file: " + e.getMessage());
+            PeakGambling.LOGGER.warning(String.format("[%s] Error Loading 'death_bets.json'  : %s", PeakGambling.PLUGIN, e.getMessage()));
         }
     }
 }
