@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import org.bukkit.Bukkit;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 
 import com.albertdayoung.allgamblingandcasino.PeakGambling;
@@ -19,6 +20,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
+
+import net.kyori.adventure.text.Component;
 
 
 
@@ -44,6 +47,8 @@ public class BetOnPlayerDeath {
         bet.setDeathType(betDamageCause);
         bet.setBetAmount(betAmount);
         this.bets.add(bet);
+
+        PeakGambling.getEconomy().withdrawPlayer(Bukkit.getServer().getPlayer(betOwner), betAmount);
 
         this.save();
     }
@@ -93,7 +98,7 @@ public class BetOnPlayerDeath {
         Gson gson = new GsonBuilder().create();
 
         try (FileWriter writer = new FileWriter(deathBetsDataFile)) {
-            gson.toJson(this.bets, writer);
+            gson.toJson(this.bets.getBets(), writer);
         } catch (IOException e) {
             PeakGambling.LOGGER.warning("Error saving data file: " + e.getMessage());
         }

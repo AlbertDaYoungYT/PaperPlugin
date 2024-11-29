@@ -34,6 +34,8 @@ public class BetOnDeathSelectPlayerPage extends GuiContainerLayout {
     LeaderboardSort sorter;
     List<String> players;
 
+    Player guiPlayer;
+
     public static final Material SELECTED_MATERIAL = GOLD_BLOCK;
 
     public BetOnDeathSelectPlayerPage(DeathOptionsData betCause, Integer betAmount) {
@@ -42,11 +44,14 @@ public class BetOnDeathSelectPlayerPage extends GuiContainerLayout {
         this.betCause = betCause;
         this.betAmount = betAmount;
         this.sorter = new LeaderboardSort(Bukkit.getOfflinePlayers());
+
+        this.guiPlayer = null;
     }
 
 
 
     public void open(Player _player) {
+        this.guiPlayer = _player;
         Gui.of(2)
             .title(Component.text("Select a Player"))
             .component(component -> {
@@ -71,6 +76,7 @@ public class BetOnDeathSelectPlayerPage extends GuiContainerLayout {
     public final void showPlayerSelector(int row, int column) {
         
         this.players = this.sorter.sort();
+        this.players.remove(this.guiPlayer.getUniqueId().toString());
         int playerListLength = players.size();
         Material usedMaterial;
 
@@ -97,7 +103,8 @@ public class BetOnDeathSelectPlayerPage extends GuiContainerLayout {
                 .asGuiItem((player, context) -> {
                     if (this.betTarget.get() != new UUID(0, 0)) {
                         PeakGambling.deathBets.placeBet(player.getUniqueId(), this.betTarget.get(), this.betCause.getCauseOptions(), this.betAmount);
-                        player.sendMessage(String.format("It works ($%s)", Bukkit.getServer().getPlayer(this.betTarget.get())));
+                        PeakGambling.getEconomy().withdrawPlayer(player, this.betAmount);
+                        
                         player.closeInventory();
                     }
                 })

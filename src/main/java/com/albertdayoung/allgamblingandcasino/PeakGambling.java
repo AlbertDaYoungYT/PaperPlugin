@@ -13,6 +13,7 @@ import com.albertdayoung.allgamblingandcasino.commands.MainDebugCommand;
 import com.albertdayoung.allgamblingandcasino.gambling.BetOnPlayerDeath;
 
 import io.papermc.lib.PaperLib;
+import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.milkbowl.vault.chat.Chat;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
@@ -42,9 +43,13 @@ public class PeakGambling extends JavaPlugin {
 	public static YamlConfiguration mainConfig;
     public static BetOnPlayerDeath deathBets;
     
+    public static MiniMessage miniMessage = MiniMessage.miniMessage();
+    
     private static Economy econ = null;
     private static Permission perms = null;
     private static Chat chat = null;
+
+    
 
 	@Override
 	public void onEnable() {
