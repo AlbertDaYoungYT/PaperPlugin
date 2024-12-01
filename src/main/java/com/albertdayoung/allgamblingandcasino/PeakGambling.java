@@ -19,15 +19,16 @@ import net.milkbowl.vault.permission.Permission;
 
 
 /*
-- TODO: Roulette
-- TODO: Plinko
-- TODO: Slots
-- TODO: Blackjack
-- TODO: Bet on next Death
-- TODO: Betting on value of items
-- TODO: Bounties
+- TODO: Roulette                  :: (DONE)
+- TODO: Plinko                    ::
+- TODO: Slots                     ::
+- TODO: Blackjack                 ::
+- TODO: Bet on next Death         ::
+- TODO: Betting on value of items ::
+- TODO: Bounties                  ::
 
 TODO: Add the third menu item in the left side of MainCasino, it could maybe be a list of the Players bets.
+TODO: Add the ability to cache the player head meta data so the scoreboard has the correct Player heads.
 */
 
 

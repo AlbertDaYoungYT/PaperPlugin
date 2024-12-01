@@ -1,12 +1,8 @@
 package com.albertdayoung.allgamblingandcasino.gui.pages.betOnPlayer;
 
-import java.util.List;
-import java.util.UUID;
-
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
-import org.checkerframework.common.returnsreceiver.qual.This;
 
 import com.albertdayoung.allgamblingandcasino.data.AllDeathOptions;
 import com.albertdayoung.allgamblingandcasino.gui.components.BlankingFill;
@@ -14,6 +10,7 @@ import com.albertdayoung.allgamblingandcasino.gui.components.BlankingFillWithTyp
 import com.albertdayoung.allgamblingandcasino.gui.components.buttons.BackToMainMenuButton;
 import com.albertdayoung.allgamblingandcasino.gui.components.buttons.PlaceBetOnPlayerDeathTypeButtons;
 import com.albertdayoung.allgamblingandcasino.gui.components.helpers.GuiContainerLayout;
+import com.albertdayoung.allgamblingandcasino.gui.components.theme.Theme;
 import com.albertdayoung.allgamblingandcasino.utils.dataclasses.DeathOptionsData;
 
 import dev.triumphteam.gui.paper.Gui;
@@ -35,7 +32,7 @@ public class BetOnDeathTypePage extends GuiContainerLayout {
         AllDeathOptions deathOptions = new AllDeathOptions();
         
         Gui.of(6)
-            .title(Component.text("Place a Bet"))
+            .title(Component.text("Choose Death Type"))
             .component(component -> {
 
                 this.betCause = component.remember(new DeathOptionsData(DamageCause.CUSTOM, Material.LIGHT_GRAY_STAINED_GLASS_PANE, " ", " "));
@@ -55,11 +52,13 @@ public class BetOnDeathTypePage extends GuiContainerLayout {
                         }
                     }
 
-                    container.setItem(6, 5, ItemBuilder.from(Material.GOLD_BLOCK)
+                    container.setItem(6, 5, ItemBuilder.from(Theme.PRIMARY_BUTTON_MATERIAL)
                             .name(Component.text(String.format("Bet on (%s)", this.betCause.get().getCauseOptionsTitle())))
                             .asGuiItem((player, context) -> {
-                                BetOnDeathSelectPlayerPage selectPlayerPage = new BetOnDeathSelectPlayerPage(this.betCause.get(), this.betAmount);
-                                selectPlayerPage.open(_player);
+                                if (!this.betCause.get().getCauseOptions().name().equals("CUSTOM")) {
+                                    BetOnDeathSelectPlayerPage selectPlayerPage = new BetOnDeathSelectPlayerPage(this.betCause.get(), this.betAmount);
+                                    selectPlayerPage.open(_player);
+                                }
                             })
                     );
                     BackToMainMenuButton.invoke(container, 6, 4);

@@ -7,14 +7,12 @@ import org.bukkit.inventory.ItemStack;
 import com.albertdayoung.allgamblingandcasino.PeakGambling;
 import com.albertdayoung.allgamblingandcasino.gui.components.BlankingFill;
 import com.albertdayoung.allgamblingandcasino.gui.components.TwoItemCasinoFill;
-import com.albertdayoung.allgamblingandcasino.gui.components.buttons.PlayerAccountButton;
 import com.albertdayoung.allgamblingandcasino.gui.components.helpers.GuiContainerLayout;
 import com.albertdayoung.allgamblingandcasino.gui.pages.Leaderboard;
 import com.albertdayoung.allgamblingandcasino.gui.pages.PlayerAccount;
 import com.albertdayoung.allgamblingandcasino.utils.PlayerHead;
 
 import dev.triumphteam.gui.click.ClickContext;
-import dev.triumphteam.gui.click.action.RunnableGuiClickAction;
 import dev.triumphteam.gui.component.functional.FunctionalGuiComponentRender;
 import dev.triumphteam.gui.container.GuiContainer;
 import dev.triumphteam.gui.paper.Gui;
@@ -24,7 +22,7 @@ import net.kyori.adventure.text.Component;
 public class MainCasino extends GuiContainerLayout {
     public static void open(Player _player) {
         Gui.of(3)
-            .title(Component.text("Casino"))
+            .title(Component.text("PeakGambling Casino"))
             .statelessComponent(new FunctionalGuiComponentRender<Player, ItemStack>() {
             @Override
             public void render(GuiContainer<Player, ItemStack> container) {
@@ -33,10 +31,11 @@ public class MainCasino extends GuiContainerLayout {
 
                 openPlayerAccount(container, _player, 1, 1);
                 openLeaderboard(container, _player, 2, 1);
-                openPlayerAccount(container, _player, 3, 1);
+                // Something Something, another menu item at (3:1)
 
                 playRouletteButton(container, _player, 2, 5);
                 playBetOnDeaths(container, _player, 2, 6);
+                // Something Something, a Plinko game
             }
         })
             .build()
@@ -50,7 +49,7 @@ public class MainCasino extends GuiContainerLayout {
                 .asGuiItem((Player player, ClickContext context) -> {
                     double playerBalance = PeakGambling.getEconomy().getBalance(player);
                     if (playerBalance > 0.0) {
-                        MainRoulette.open(_player);
+                        //MainRoulette.open(_player);
                         player.sendMessage("Roulette is still in development!");
                     } else {
                         player.sendMessage("You don't have enough money to gamble!");

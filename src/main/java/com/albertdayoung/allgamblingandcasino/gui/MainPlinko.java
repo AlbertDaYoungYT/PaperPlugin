@@ -19,24 +19,23 @@ import dev.triumphteam.gui.paper.builder.item.ItemBuilder;
 import dev.triumphteam.nova.MutableState;
 import net.kyori.adventure.text.Component;
 
-public class MainBetOnDeath extends GuiContainerLayout {
+public class MainPlinko extends GuiContainerLayout {
     MutableState<Integer> betAmount;
 
     public static Material INCREMENT_MATERIAL = Material.LIME_STAINED_GLASS_PANE;
     public static Material DECREMENT_MATERIAL = Material.RED_STAINED_GLASS_PANE;
 
 
-    public MainBetOnDeath() {
+    public MainPlinko() {
         this.betAmount = null;
     }
 
     public void open(Player _player) {
         Gui.of(1)
-            .title(Component.text(String.format("Amount (Max: $%s)", String.valueOf(round(PeakGambling.getEconomy().getBalance(_player), 2)))))
+            .title(Component.text(String.format("Amount per ball (Max: $%s)", String.valueOf(round(PeakGambling.getEconomy().getBalance(_player), 2)))))
             .component(component -> {
 
                 this.betAmount = component.remember(10);
-                final var betDeathOption = component.remember(new DeathOptionsData(DamageCause.CUSTOM, Material.LIGHT_GRAY_STAINED_GLASS_PANE, " ", " "));
                 
 
                 component.render(container -> {
@@ -113,8 +112,7 @@ public class MainBetOnDeath extends GuiContainerLayout {
                             .name(Component.text(String.format("Bet $%s", this.betAmount.get())))
                             .asGuiItem((player, context) -> {
                                 if (this.betAmount.get() <= PeakGambling.getEconomy().getBalance(_player)) {
-                                    BetOnDeathTypePage betOnDeathTypePage = new BetOnDeathTypePage(this.betAmount.get());
-                                    betOnDeathTypePage.open(_player);
+                                    //betOnDeathTypePage.open(_player);
                                 }
                                 
                                 player.sendMessage(defaultChatMessage("Insufficient balance"));

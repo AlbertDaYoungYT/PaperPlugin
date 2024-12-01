@@ -148,9 +148,7 @@ public class BetOnDeathSelectPlayerPage extends GuiContainerLayout {
                     player.closeInventory();
                 } else {
                     player.sendMessage(defaultChatMessage("Please select a Player"));
-                    player.closeInventory();
                 }
-
             }
         })
         );
