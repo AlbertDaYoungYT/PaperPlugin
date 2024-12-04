@@ -12,6 +12,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 import com.albertdayoung.allgamblingandcasino.gui.pages.betOnPlayer.BetOnDeathTypePage;
+import com.albertdayoung.allgamblingandcasino.gui.pages.plinko.PlinkoGamePage;
 import com.albertdayoung.allgamblingandcasino.utils.dataclasses.DeathOptionsData;
 
 import dev.triumphteam.gui.paper.Gui;
@@ -112,10 +113,12 @@ public class MainPlinko extends GuiContainerLayout {
                             .name(Component.text(String.format("Bet $%s", this.betAmount.get())))
                             .asGuiItem((player, context) -> {
                                 if (this.betAmount.get() <= PeakGambling.getEconomy().getBalance(_player)) {
-                                    //betOnDeathTypePage.open(_player);
+                                    PlinkoGamePage plinkoGamePage = new PlinkoGamePage(this.betAmount.get());
+                                    plinkoGamePage.open(_player);
+                                } else {
+                                    player.sendMessage(defaultChatMessage("Insufficient balance"));
                                 }
                                 
-                                player.sendMessage(defaultChatMessage("Insufficient balance"));
                                 //_player.sendMessage(String.format("It works ($%s)", this.betAmount.get().toString()));
                             })
                     );

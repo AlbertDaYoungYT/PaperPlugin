@@ -115,9 +115,10 @@ public class MainBetOnDeath extends GuiContainerLayout {
                                 if (this.betAmount.get() <= PeakGambling.getEconomy().getBalance(_player)) {
                                     BetOnDeathTypePage betOnDeathTypePage = new BetOnDeathTypePage(this.betAmount.get());
                                     betOnDeathTypePage.open(_player);
+                                } else {
+                                    player.sendMessage(defaultChatMessage("Insufficient balance"));
                                 }
                                 
-                                player.sendMessage(defaultChatMessage("Insufficient balance"));
                                 //_player.sendMessage(String.format("It works ($%s)", this.betAmount.get().toString()));
                             })
                     );
