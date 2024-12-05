@@ -74,6 +74,22 @@ public class MainCasino extends GuiContainerLayout {
         );
     }
 
+    public static void playPlinko(GuiContainer<Player, ItemStack> container, Player _player, int row, int column) {
+        container.setItem(row, column, ItemBuilder.from(Material.PLAYER_HEAD)
+                .name(Component.text("Play Plinko"))
+                .lore(Component.text(" "))
+                .asGuiItem((Player player, ClickContext context) -> {
+                        double playerBalance = PeakGambling.getEconomy().getBalance(player);
+                        if (playerBalance > 0.0) { 
+                            MainPlinko plinkoGui = new MainPlinko();
+                            plinkoGui.open(_player);
+                        } else {
+                            player.sendMessage("You don't have enough money to place a bet!");
+                        }
+                })
+        );
+    }
+
     public static void openLeaderboard(GuiContainer<Player, ItemStack> container, Player _player, int row, int column) {
         container.setItem(row, column, ItemBuilder.from(Material.OAK_SIGN)
                 .name(Component.text("Check the Leaderboard"))

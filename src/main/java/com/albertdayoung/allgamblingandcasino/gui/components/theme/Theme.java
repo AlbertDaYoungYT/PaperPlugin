@@ -19,6 +19,9 @@ public class Theme {
     public static final Material ACTIVE_ITEM_MATERIAL         = Material.GREEN_WOOL;
     public static final Material INACTIVE_ITEM_MATERIAL       = Material.GRAY_WOOL;
 
+    public static final Material INACTIVE_PLINKO_MATERIAL     = Material.DARK_OAK_BUTTON;
+    public static final Material ACTIVE_PLINKO_MATERIAL       = Material.BIRCH_BUTTON;
+
 
     public static Component defaultChatMessage(Object arg) {
         return PeakGambling.miniMessage.deserialize(String.format("[<dark_green>%s<white>]: <dark_green>%s", PeakGambling.PLUGIN, arg));

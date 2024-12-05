@@ -5,17 +5,19 @@ import java.util.ArrayList;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 
+import com.albertdayoung.allgamblingandcasino.PeakGambling;
 import com.albertdayoung.allgamblingandcasino.gambling.PlinkoGame;
 import com.albertdayoung.allgamblingandcasino.gui.components.BlankingFill;
 import com.albertdayoung.allgamblingandcasino.gui.components.BlankingFillWithType;
 import com.albertdayoung.allgamblingandcasino.gui.components.buttons.BackToMainMenuButton;
+import com.albertdayoung.allgamblingandcasino.gui.components.helpers.GuiContainerLayout;
 import com.albertdayoung.allgamblingandcasino.gui.components.theme.Theme;
 
 import dev.triumphteam.gui.paper.Gui;
 import dev.triumphteam.gui.paper.builder.item.ItemBuilder;
 import net.kyori.adventure.text.Component;
 
-public class PlinkoGamePage {
+public class PlinkoGamePage extends GuiContainerLayout {
     Integer betAmount;
 
     public PlinkoGamePage(Integer betAmount) {
@@ -40,9 +42,12 @@ public class PlinkoGamePage {
                     container.setItem(6, 5, ItemBuilder.from(Theme.PRIMARY_BUTTON_MATERIAL)
                             .name(Component.text("Drop ball"))
                             .asGuiItem((player, context) -> {
-                                
+                                PeakGambling.getEconomy().withdrawPlayer(_player, betAmount);
+                                game.run(betAmount);
+                                stepsTheBallTook.set(game.getPath());
                             })
                     );
+                    
                     BackToMainMenuButton.invoke(container, 6, 4);
                 });
 
