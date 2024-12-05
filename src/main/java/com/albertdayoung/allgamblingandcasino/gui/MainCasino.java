@@ -35,7 +35,7 @@ public class MainCasino extends GuiContainerLayout {
 
                 playRouletteButton(container, _player, 2, 5);
                 playBetOnDeaths(container, _player, 2, 6);
-                // Something Something, a Plinko game
+                playPlinko(container, _player, 2, 4);
             }
         })
             .build()
@@ -75,7 +75,7 @@ public class MainCasino extends GuiContainerLayout {
     }
 
     public static void playPlinko(GuiContainer<Player, ItemStack> container, Player _player, int row, int column) {
-        container.setItem(row, column, ItemBuilder.from(Material.PLAYER_HEAD)
+        container.setItem(row, column, ItemBuilder.from(Material.SUNFLOWER)
                 .name(Component.text("Play Plinko"))
                 .lore(Component.text(" "))
                 .asGuiItem((Player player, ClickContext context) -> {

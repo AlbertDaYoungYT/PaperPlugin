@@ -33,11 +33,16 @@ public class PlinkoGamePage extends GuiContainerLayout {
             .component(component -> {
                 
                 final var stepsTheBallTook = component.remember(new ArrayList<Integer>());
+                final var starter = component.remember(0);
+                PlinkoGameGUI gameGUI = new PlinkoGameGUI(stepsTheBallTook, 1, 5, 5);
 
                 component.render(container -> {
+                    gameGUI.setContainer(container);
 
-                    BlankingFillWithType.invoke(container, Material.GRAY_STAINED_GLASS_PANE, 1, 9, 1, 6);
-                    BlankingFill.invoke(container, 2, 8, 2, 5);
+                    //BlankingFillWithType.invoke(container, Material.GRAY_STAINED_GLASS_PANE, 1, 9, 1, 6);
+                    //BlankingFill.invoke(container, 2, 8, 2, 5);
+
+                    gameGUI.invoke();
 
                     container.setItem(6, 5, ItemBuilder.from(Theme.PRIMARY_BUTTON_MATERIAL)
                             .name(Component.text("Drop ball"))
@@ -45,6 +50,7 @@ public class PlinkoGamePage extends GuiContainerLayout {
                                 PeakGambling.getEconomy().withdrawPlayer(_player, betAmount);
                                 game.run(betAmount);
                                 stepsTheBallTook.set(game.getPath());
+                                gameGUI.dropBall();
                             })
                     );
                     
